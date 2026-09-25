@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import profileImg from "@/assets/profile.png";
+import profileImg from "@/assets/profile.jpg";
 
 const marqueeTech = [
   "Python", "FastAPI", "LangChain", "RAG", "React / Vite", "Supabase", "GCP", 
@@ -31,13 +31,13 @@ export function AboutSection() {
           className="space-y-6 text-muted-foreground text-base md:text-lg leading-relaxed font-sans"
         >
           <p>
-            Hello! I'm <span className="text-foreground font-semibold">Victor</span>, a software engineer and technical writer based in Nigeria. I enjoy building things that live on the internet — from intelligent backend systems to well-crafted technical articles that make complex ideas accessible.
+            Hi there, I'm <span className="text-foreground font-semibold">Victor</span>. I’m a software engineer, technical writer, and mentor who loves untangling complex problems. For me, engineering isn't just about writing code; it’s about making the complicated feel simple.
           </p>
           <p>
-            My journey into tech started with a curiosity about how machines learn and make decisions. That curiosity led me down the path of AI/ML engineering, where I've had the privilege of working on recommendation systems, NLP pipelines, RAG systems, and scalable API architectures.
+            I found my calling at the intersection of AI and backend systems. Whether I'm designing scalable API architectures, building custom LLM integrations, or fine-tuning RAG systems, my goal is always the same: build digital experiences that are as intelligent as they are intuitive.
           </p>
           <p>
-            Today, I split my time between writing production code, publishing technical content for developer communities, and mentoring early-career techies through the often-confusing landscape of tech careers.
+            But building the tools isn't enough—I believe in sharing the blueprint. Today, I split my time between shipping robust applications, writing deep-dive technical content for developer communities, and guiding early-career techies through the industry.
           </p>
         </motion.div>
 
