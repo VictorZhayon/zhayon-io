@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import profileImg from "@/assets/profile.png";
 
-const marqueeTech = ["Python", "JavaScript", "FastAPI", "LangGraph", "RAG", "Mintlify", "MDX", "Supabase", "Google Gemini API", "Dart", "React", "Next.js", "TypeScript", "Tailwind CSS"];
+const marqueeTech = [
+  "Python", "FastAPI", "LangChain", "RAG", "React / Vite", "Supabase", "GCP", 
+  "AWS", "Mintlify", "Claude", "Gemini", "OpenAI", "LLM integration", "Ollama", 
+  "Docs-as-Code", "Dart/Flutter", "QA / Data Annotation", "Next.js", 
+  "PWA development", "SEO/AEO", "System Design/Architecture", "CI/CD"
+];
 
 export function AboutSection() {
   return (
@@ -81,7 +86,7 @@ export function AboutSection() {
           100% { transform: translateX(-33.33%); }
         }
         .animate-marquee {
-          animation: marquee 20s linear infinite;
+          animation: marquee 30s linear infinite;
         }
       `}</style>
     </section>

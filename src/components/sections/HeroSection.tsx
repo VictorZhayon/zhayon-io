@@ -39,18 +39,29 @@ export function HeroSection() {
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
         <h1 className="sr-only">{greeting} — {headlinesList.join(", ")}</h1>
 
-        <motion.div
+        {/* Aesthetic "Hire Me" Badge */}
+        <motion.a
+          href="#contact"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-card/50 backdrop-blur-sm border border-border text-primary text-xs md:text-sm font-mono mb-8"
+          className="group relative inline-flex items-center justify-center p-[1.5px] rounded-full mb-8 overflow-hidden cursor-pointer"
         >
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-          </span>
-          <span className="ml-1 md:ml-2">Available for new opportunities</span>
-        </motion.div>
+          {/* Spinning Gradient Border */}
+          <span className="absolute inset-0 w-full h-full bg-[conic-gradient(from_90deg_at_50%_50%,#00000000_50%,#38BDF8_100%)] animate-[spin_2.5s_linear_infinite]" />
+          
+          <div className="relative inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-background/90 backdrop-blur-xl text-xs md:text-sm font-heading font-bold text-primary shadow-[0_0_20px_-5px_rgba(56,189,248,0.3)] group-hover:shadow-[0_0_30px_-5px_rgba(56,189,248,0.5)] transition-shadow duration-300">
+            <span className="relative flex h-2.5 w-2.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-primary"></span>
+            </span>
+            <span className="uppercase tracking-widest bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+              Hire Me!
+            </span>
+          </div>
+        </motion.a>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
