@@ -136,15 +136,9 @@ export const projects = [
 
 export const clients = [
   {
-    title: "Laptop Doctor",
-    description:
-      "Business site for a full-service laptop shop — covering sales, expert repairs, genuine accessories, professional software installation, and premium laptop skins.",
-    live: "https://laptopdoctor.netlify.app/",
-  },
-  {
     title: "EsterOfWeb3",
     description: "Personal portfolio website for EsterOfWeb3, a Web3 professional.",
-    live: "https://esterofweb3.netlify.app/",
+    live: "https://esterofweb3.vercel.app",
   },
   {
     title: "Praise Oton",
