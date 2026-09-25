@@ -94,19 +94,12 @@ export const featuredProject = {
   title: "techDNA",
   description:
     "A career discovery web app that helps people find their natural fit in tech. Users complete a 10-question digital literacy assessment followed by a 40-question personality and aptitude quiz.",
-  tech: ["HTML", "CSS", "JavaScript", "Netlify Serverless Functions", "Google Gemini 2.5 Flash", "Supabase (PostgreSQL)", "Netlify"],
+  tech: ["Next.js", "React", "Tailwind CSS", "Supabase", "Vercel AI SDK", "Google Gemini", "Paystack"],
   github: "https://github.com/VictorZhayon/tech_dna-pathfinder",
   live: "https://www.techdna.app",
 };
 
 export const projects = [
-  {
-    title: "Kavanah",
-    description:
-      "A gospel music sight-reading learning app. Helps upcoming musicians build fluency in reading gospel notation through structured lessons and exercises.",
-    tech: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS v4", "Supabase"],
-    comingSoon: true,
-  },
   {
     title: "Volta",
     description:
@@ -138,13 +131,6 @@ export const projects = [
     tech: ["Python", "Streamlit", "Google Gemini API", "FAISS"],
     github: "https://github.com/VictorZhayon/Sage",
     live: "https://sage-ai-docs.streamlit.app/",
-  },
-  {
-    title: "LifeLens",
-    description:
-      "A PWA that helps you conduct structured life reviews across 9 areas with AI-powered insights, trend charts, and email reminders — backed by Firebase for persistent storage. Built by Victor for Victor.",
-    tech: ["React (Vite)", "Tailwind CSS", "Firebase Firestore", "Google Gemini API"],
-    github: "https://github.com/VictorZhayon/life_lens",
   },
 ];
 
