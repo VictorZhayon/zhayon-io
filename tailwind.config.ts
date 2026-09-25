@@ -15,6 +15,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
+        heading: ["Outfit", "system-ui", "sans-serif"],
         mono: ["Fira Code", "monospace"],
       },
       colors: {

@@ -27,41 +27,29 @@ const socialLinks = [
 
 export function FooterSection() {
   return (
-    <footer className="py-12 text-center">
-      {/* Mobile social links */}
-      <div className="flex items-center justify-center gap-5 mb-6 lg:hidden">
-        {socialLinks.map((social) => (
-          <a
-            key={social.label}
-            href={social.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors duration-200"
-            aria-label={social.label}
-          >
-            <social.icon size={18} />
-          </a>
-        ))}
+    <footer className="py-8 text-center border-t border-border/30 bg-background/50 backdrop-blur-md">
+      <div className="flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto px-6">
+        <div className="mb-4 md:mb-0">
+          <p className="font-mono text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} Victor Zion. All rights reserved.
+          </p>
+        </div>
+        
+        <div className="flex items-center gap-6">
+          {socialLinks.map((social) => (
+            <a
+              key={social.label}
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110"
+              aria-label={social.label}
+            >
+              <social.icon size={20} />
+            </a>
+          ))}
+        </div>
       </div>
-      <a
-        href="https://github.com/VictorZhayon"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-mono text-xs text-muted-foreground hover:text-primary transition-colors duration-200 block"
-      >
-        <p>Designed & Built by Victor Zion</p>
-        <p className="mt-1">
-          Inspired by{" "}
-          <a
-            href="https://brittanychiang.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            Brittany Chiang
-          </a>
-        </p>
-      </a>
     </footer>
   );
 }

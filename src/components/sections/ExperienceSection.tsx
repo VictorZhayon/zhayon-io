@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { experiences } from "@/constants/data";
 
 export function ExperienceSection() {
@@ -7,30 +7,31 @@ export function ExperienceSection() {
   const current = experiences[active];
 
   return (
-    <section id="experience" className="py-24">
-      <motion.h3
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.4 }}
-        className="section-heading"
-        data-num="02."
-      >
-        Where I've worked
-      </motion.h3>
+    <section id="experience" className="py-24 relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full mix-blend-screen filter blur-[100px] pointer-events-none" />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.4, delay: 0.1 }}
-        className="flex flex-col sm:flex-row gap-0"
+        transition={{ duration: 0.5 }}
+        className="mb-16 px-4 md:px-0"
       >
-        {/* Tab list */}
+        <h3 className="text-primary font-mono text-sm mb-2 uppercase tracking-widest">02. Career</h3>
+        <h2 className="text-foreground text-4xl md:text-5xl font-heading font-bold">Experience</h2>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className="flex flex-col md:flex-row gap-8 lg:gap-12 px-4 md:px-0"
+      >
         <div
           role="tablist"
           aria-label="Companies"
-          className="flex sm:flex-col overflow-x-auto sm:overflow-x-visible border-b sm:border-b-0 sm:border-l border-border min-w-[140px]"
+          className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-border/50 min-w-[180px] scrollbar-none"
         >
           {experiences.map((exp, i) => (
             <button
@@ -38,10 +39,10 @@ export function ExperienceSection() {
               role="tab"
               aria-selected={active === i}
               onClick={() => setActive(i)}
-              className={`px-5 py-3 text-xs font-mono text-left whitespace-nowrap transition-all duration-200 border-b-2 sm:border-b-0 sm:border-l-2 -ml-px ${
+              className={`px-4 md:px-6 py-3 md:py-4 text-sm font-heading font-medium text-left whitespace-nowrap transition-all duration-300 md:-ml-[1px] md:border-l-2 -mb-[1px] md:mb-0 border-b-2 md:border-b-0 ${
                 active === i
-                  ? "text-primary border-primary bg-muted/50"
-                  : "text-muted-foreground border-transparent hover:text-foreground hover:bg-muted/30"
+                  ? "text-primary border-primary bg-primary/5"
+                  : "text-muted-foreground border-transparent hover:text-foreground hover:bg-card/50"
               }`}
             >
               {exp.company}
@@ -49,32 +50,53 @@ export function ExperienceSection() {
           ))}
         </div>
 
-        {/* Content */}
-        <div role="tabpanel" className="sm:pl-8 pt-4 sm:pt-0 min-h-[280px]">
-          <h4 className="text-foreground text-lg font-medium">
-            {current.title}{" "}
-            <span className="text-primary">@ {current.company}</span>
-          </h4>
-          <p className="font-mono text-muted-foreground text-xs mt-1 mb-6">
-            {current.period}
-          </p>
-          <div className="flex flex-wrap gap-2 mb-4">
-            {current.tech.map((t) => (
-              <span key={t} className="font-mono text-xs text-primary bg-primary/10 px-2.5 py-1 rounded">
-                {t}
-              </span>
-            ))}
-          </div>
-          <ul className="space-y-3">
-            {current.bullets.map((bullet, i) => (
-              <li key={i} className="flex gap-3 text-muted-foreground text-sm leading-relaxed">
-                <span className="text-primary mt-1.5 shrink-0">▹</span>
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
+        <div role="tabpanel" className="flex-1 bg-card/30 backdrop-blur-md border border-border/50 p-6 md:p-8 rounded-3xl md:min-h-[350px]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={active}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -20 }}
+              transition={{ duration: 0.3 }}
+            >
+              <h4 className="text-foreground text-xl md:text-2xl font-heading font-bold mb-2 leading-tight">
+                {current.title}{" "}
+                <span className="text-primary block sm:inline mt-1 sm:mt-0">@ {current.company}</span>
+              </h4>
+              <p className="font-mono text-muted-foreground text-sm mb-6 md:mb-8">
+                {current.period}
+              </p>
+              
+              <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
+                {current.tech.map((t) => (
+                  <span key={t} className="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                    {t}
+                  </span>
+                ))}
+              </div>
+              
+              <ul className="space-y-4">
+                {current.bullets.map((bullet, i) => (
+                  <li key={i} className="flex gap-3 md:gap-4 text-muted-foreground text-sm md:text-base leading-relaxed">
+                    <span className="text-primary mt-1 shrink-0">▹</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </AnimatePresence>
         </div>
       </motion.div>
+      
+      <style>{`
+        .scrollbar-none::-webkit-scrollbar {
+          display: none;
+        }
+        .scrollbar-none {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+      `}</style>
     </section>
   );
 }
