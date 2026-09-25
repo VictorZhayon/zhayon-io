@@ -1,6 +1,5 @@
-import { BookOpen, Menu, X as XIcon, Sun, Moon } from "lucide-react";
+import { BookOpen, Menu, X as XIcon } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
 import { navLinks, socialLinks } from "@/constants/data";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
@@ -27,22 +26,6 @@ const iconMap: Record<string, React.ComponentType<{ size?: number | string }>> =
   X: XTwitterIcon,
   Medium: BookOpen,
 };
-
-function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return <span className="w-5 h-5" />;
-  return (
-    <button
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      aria-label="Toggle theme"
-      className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:-translate-y-0.5"
-    >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-    </button>
-  );
-}
 
 export function FixedSidebar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -95,7 +78,6 @@ export function FixedSidebar() {
           V<span className="text-primary">Z</span>
         </a>
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="text-foreground hover:text-primary transition-colors"
@@ -206,7 +188,6 @@ export function FixedSidebar() {
               </a>
             );
           })}
-          <ThemeToggle />
         </div>
       </aside>
     </>
