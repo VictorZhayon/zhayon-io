@@ -11,6 +11,11 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'url',
+      title: 'Company URL',
+      type: 'url',
+    }),
+    defineField({
       name: 'title',
       title: 'Job Title',
       type: 'string',

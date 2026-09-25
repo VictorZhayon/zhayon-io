@@ -73,7 +73,16 @@ export function ExperienceSection() {
             >
               <h4 className="text-foreground text-xl md:text-2xl font-heading font-bold mb-2 leading-tight">
                 {current.title}{" "}
-                <span className="text-primary block sm:inline mt-1 sm:mt-0">@ {current.company}</span>
+                <span className="text-primary block sm:inline mt-1 sm:mt-0">
+                  @{" "}
+                  {current.url ? (
+                    <a href={current.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                      {current.company}
+                    </a>
+                  ) : (
+                    current.company
+                  )}
+                </span>
               </h4>
               <p className="font-mono text-muted-foreground text-sm mb-6 md:mb-8">
                 {current.period}

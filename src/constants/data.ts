@@ -1,5 +1,4 @@
 export const headlines = [
-  "Engineer who writes. Writer who ships.",
   "I speak fluently in code and in prose.",
   "I build what works. I write what lasts.",
   "Half engineer, half writer. Fully useful.",
@@ -33,19 +32,21 @@ export const technologies = [
 
 export const experiences = [
   {
-    company: "GemNexus",
+    company: "Gem Nexus",
+    url: "https://www.gemnexushq.com",
     title: "Chief Technology Officer",
     period: "Dec 2025 — Present",
     tech: ["Python", "JavaScript", "AWS", "PostgreSQL"],
     bullets: [
-      "Technology Strategy & Vision — Defining and driving the technical direction of GemNexus, including decisions around the tools, platforms, and infrastructure that power your training programs and digital products.",
-      "Product Development & Oversight — Leading the build and iteration of tech products, ensuring they align with GemNexus's mission. This includes overseeing development cycles, quality, and the roadmap for tools used in training and career advisory.",
-      "Tech Team Leadership & Capacity Building — Managing and mentoring the technical team, and since GemNexus is a digital literacy organization, also modeling and championing a culture of continuous learning and skills development — both internally and for the learners you serve.",
+      "Technology Strategy & Vision — Defining and driving the technical direction of Gem Nexus, including decisions around the tools, platforms, and infrastructure that power your training programs and digital products.",
+      "Product Development & Oversight — Leading the build and iteration of tech products, ensuring they align with Gem Nexus's mission. This includes overseeing development cycles, quality, and the roadmap for tools used in training and career advisory.",
+      "Tech Leadership & Ecosystem Growth — Directing the internal engineering team while championing Gem Nexus's core philosophy: empowering emerging talent and builders to stay relevant in a fast-changing digital world through continuous learning, mentorship, and collaborative buildathons.",
     ],
   },
   {
     company: "Hackmamba",
-    title: "Documentation Engineer",
+    url: "https://hackmamba.io",
+    title: "Technical Writer",
     period: "Oct 2025 — Present",
     tech: ["Mintlify", "Markdown", "SEO", "Git"],
     bullets: [
@@ -55,14 +56,14 @@ export const experiences = [
     ],
   },
   {
-    company: "Elora",
-    title: "LLM Engineer / Technical Writer",
-    period: "Aug 2025 — Present",
-    tech: ["Python", "TensorFlow", "FastAPI", "Docker"],
+    company: "Morlabs Protocol",
+    title: "AI Engineer and Lead Technical Researcher",
+    period: "Aug 2025 — Aug 2026",
+    tech: ["Python", "Solana", "Web3", "FastAPI"],
     bullets: [
-      "Wrote extensive and elaborate documentations to describe workflow and system.",
-      "Led research in the application of AI in Healthcare, particularly skincare.",
-      "Collaborated with cross-functional teams to integrate AI solutions into product offerings, resulting in a 25% improvement in user engagement.",
+      "Led technical research and AI integration for a comprehensive directory of Solana SDKs and APIs, streamlining developer onboarding into the Web3 ecosystem.",
+      "Authored extensive, high-quality technical documentation detailing system architectures, workflows, and SDK implementations.",
+      "Collaborated with cross-functional teams to build AI-driven search and discovery tools, significantly improving how developers find and integrate Solana protocols.",
     ],
   },
   {
