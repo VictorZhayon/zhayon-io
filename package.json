@@ -16,7 +16,11 @@
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-toast": "^1.2.14",
     "@radix-ui/react-tooltip": "^1.2.7",
+<<<<<<< HEAD
     "@sanity/client": "^8.7.0",
+=======
+    "@vercel/analytics": "^2.0.1",
+>>>>>>> 148a4425e5d9ed02302e3b96dd61e306fb48b709
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.36.0",

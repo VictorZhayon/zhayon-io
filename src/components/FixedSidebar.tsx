@@ -1,6 +1,7 @@
 import { BookOpen, Menu, X as XIcon } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { navLinks, socialLinks } from "@/constants/data";
+import { CVPreviewModal } from "@/components/CVPreviewModal";
 
 const GithubIcon = ({ size = 20 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
@@ -31,6 +32,7 @@ export function FixedSidebar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
   const [headerVisible, setHeaderVisible] = useState(true);
+  const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -102,6 +104,7 @@ export function FixedSidebar() {
               {link.label}
             </button>
           ))}
+<<<<<<< HEAD
           <a
             href="/Victor_Zion_CV.pdf"
             className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
@@ -127,6 +130,17 @@ export function FixedSidebar() {
               );
             })}
           </div>
+=======
+          <button
+            onClick={() => {
+              setMobileOpen(false);
+              setIsPreviewOpen(true);
+            }}
+            className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
+          >
+            Resume
+          </button>
+>>>>>>> 148a4425e5d9ed02302e3b96dd61e306fb48b709
         </div>
       )}
 
@@ -190,6 +204,11 @@ export function FixedSidebar() {
           })}
         </div>
       </aside>
+
+      <CVPreviewModal
+        isOpen={isPreviewOpen}
+        onClose={() => setIsPreviewOpen(false)}
+      />
     </>
   );
 }
