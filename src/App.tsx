@@ -7,7 +7,6 @@ import Index from "./pages/Index.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const App = () => (
-<<<<<<< HEAD
   <TooltipProvider>
     <Toaster />
     <Sonner />
@@ -18,23 +17,8 @@ const App = () => (
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
+    <Analytics />
   </TooltipProvider>
-=======
-  <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-      <Analytics />
-    </TooltipProvider>
-  </ThemeProvider>
->>>>>>> 148a4425e5d9ed02302e3b96dd61e306fb48b709
 );
 
 export default App;

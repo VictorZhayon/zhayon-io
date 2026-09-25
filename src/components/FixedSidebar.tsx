@@ -104,7 +104,6 @@ export function FixedSidebar() {
               {link.label}
             </button>
           ))}
-<<<<<<< HEAD
           <a
             href="/Victor_Zion_CV.pdf"
             className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
@@ -130,17 +129,6 @@ export function FixedSidebar() {
               );
             })}
           </div>
-=======
-          <button
-            onClick={() => {
-              setMobileOpen(false);
-              setIsPreviewOpen(true);
-            }}
-            className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
-          >
-            Resume
-          </button>
->>>>>>> 148a4425e5d9ed02302e3b96dd61e306fb48b709
         </div>
       )}
 
