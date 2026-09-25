@@ -9,7 +9,8 @@ export const navLinks = [
   { label: "Experience", href: "#experience", num: "02" },
   { label: "Projects", href: "#projects", num: "03" },
   { label: "Client Work", href: "#client-work", num: "04" },
-  { label: "Contact", href: "#contact", num: "05" },
+  { label: "Writing", href: "#writing", num: "05" },
+  { label: "Contact", href: "#contact", num: "06" },
 ];
 
 export const socialLinks = [
