@@ -1,26 +1,43 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Download, ArrowRight } from "lucide-react";
-import { headlines } from "@/constants/data";
+import { headlines as fallbackHeadlines } from "@/constants/data";
+import { sanityClient } from "@/lib/sanity";
 
 export function HeroSection() {
   const [index, setIndex] = useState(0);
+  const [heroData, setHeroData] = useState<any>(null);
+
+  useEffect(() => {
+    sanityClient.fetch('*[_type == "hero"][0]').then((data) => {
+      if (data) setHeroData(data);
+    }).catch(console.error);
+  }, []);
+
+  const headlinesList = heroData?.headlines || fallbackHeadlines;
+  const greeting = heroData?.greeting || "Hi, I'm Victor.";
+  const description = heroData?.description || (
+    <>
+      AI Engineer · Backend Engineer · Technical Writer · Tech Career Advisor
+      <br className="hidden md:block"/>
+      <span className="inline md:block mt-2 md:mt-0">Building digital experiences that combine stunning design with robust engineering.</span>
+    </>
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((i) => (i + 1) % headlines.length);
+      setIndex((i) => (i + 1) % headlinesList.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [headlinesList.length]);
 
   return (
     <section className="relative min-h-screen flex flex-col justify-center py-20 overflow-hidden">
-      {/* Dynamic Background Elements */}
       <div className="absolute top-1/4 left-0 md:left-1/4 w-64 h-64 md:w-96 md:h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[90px] md:blur-[128px] animate-pulse pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 md:right-1/4 w-64 h-64 md:w-96 md:h-96 bg-secondary/20 rounded-full mix-blend-screen filter blur-[90px] md:blur-[128px] animate-pulse pointer-events-none" style={{ animationDelay: "2s" }} />
 
       <div className="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-6 lg:px-8">
-        <h1 className="sr-only">Victor Zion — Software Engineer | Technical Writer</h1>
+        <h1 className="sr-only">{greeting} — {headlinesList.join(", ")}</h1>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +57,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="font-mono text-muted-foreground text-base md:text-lg mb-4">
-          Hi, I'm Victor.
+          {greeting}
         </motion.p>
         
         <motion.div
@@ -58,7 +75,7 @@ export function HeroSection() {
               transition={{ duration: 0.5, ease: "easeOut" }}
               className="absolute inset-0 text-gradient"
             >
-              {headlines[index]}
+              {headlinesList[index]}
             </motion.span>
           </AnimatePresence>
         </motion.div>
@@ -68,9 +85,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-2xl mb-10 md:mb-12 leading-relaxed">
-          AI Engineer · Backend Engineer · Technical Writer · Tech Career Advisor
-          <br className="hidden md:block"/>
-          <span className="inline md:block mt-2 md:mt-0">Building digital experiences that combine stunning design with robust engineering.</span>
+          {description}
         </motion.p>
         
         <motion.div

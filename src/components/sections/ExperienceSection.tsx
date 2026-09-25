@@ -1,10 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { experiences } from "@/constants/data";
+import { experiences as fallbackExperiences } from "@/constants/data";
+import { sanityClient } from "@/lib/sanity";
 
 export function ExperienceSection() {
   const [active, setActive] = useState(0);
-  const current = experiences[active];
+  const [sanityExperiences, setSanityExperiences] = useState<any[]>([]);
+
+  useEffect(() => {
+    sanityClient.fetch('*[_type == "experience"] | order(orderIndex asc)').then((data) => {
+      if (data && data.length > 0) setSanityExperiences(data);
+    }).catch(console.error);
+  }, []);
+
+  const experiencesData = sanityExperiences.length > 0 ? sanityExperiences : fallbackExperiences;
+  const current = experiencesData[active];
+
+  if (!current) return null;
 
   return (
     <section id="experience" className="py-24 relative overflow-hidden">
@@ -33,7 +45,7 @@ export function ExperienceSection() {
           aria-label="Companies"
           className="flex md:flex-col overflow-x-auto md:overflow-x-visible border-b md:border-b-0 md:border-l border-border/50 min-w-[180px] scrollbar-none"
         >
-          {experiences.map((exp, i) => (
+          {experiencesData.map((exp, i) => (
             <button
               key={exp.company}
               role="tab"
@@ -68,7 +80,7 @@ export function ExperienceSection() {
               </p>
               
               <div className="flex flex-wrap gap-2 mb-6 md:mb-8">
-                {current.tech.map((t) => (
+                {(current.tech || []).map((t: string) => (
                   <span key={t} className="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                     {t}
                   </span>
@@ -76,7 +88,7 @@ export function ExperienceSection() {
               </div>
               
               <ul className="space-y-4">
-                {current.bullets.map((bullet, i) => (
+                {(current.bullets || []).map((bullet: string, i: number) => (
                   <li key={i} className="flex gap-3 md:gap-4 text-muted-foreground text-sm md:text-base leading-relaxed">
                     <span className="text-primary mt-1 shrink-0">▹</span>
                     <span>{bullet}</span>

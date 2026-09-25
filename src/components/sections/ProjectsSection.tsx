@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
-import { featuredProject, projects } from "@/constants/data";
+import { featuredProject as fallbackFeatured, projects as fallbackProjects } from "@/constants/data";
+import { sanityClient } from "@/lib/sanity";
 
 const containerVariants = {
   hidden: {},
@@ -13,7 +15,22 @@ const cardVariants = {
 };
 
 export function ProjectsSection() {
-  const allProjects = [featuredProject, ...projects].slice(0, 5);
+  const [sanityProjects, setSanityProjects] = useState<any[]>([]);
+
+  useEffect(() => {
+    sanityClient.fetch('*[_type == "project"]').then((data) => {
+      if (data && data.length > 0) setSanityProjects(data);
+    }).catch(console.error);
+  }, []);
+
+  let allProjects = [];
+  if (sanityProjects.length > 0) {
+    const featured = sanityProjects.find(p => p.featured) || sanityProjects[0];
+    const others = sanityProjects.filter(p => p !== featured);
+    allProjects = [featured, ...others].slice(0, 5);
+  } else {
+    allProjects = [fallbackFeatured, ...fallbackProjects].slice(0, 5);
+  }
 
   return (
     <section id="projects" className="py-24 relative overflow-hidden">
@@ -54,12 +71,12 @@ export function ProjectsSection() {
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-6 gap-4">
                   <div className="flex flex-wrap gap-2">
-                    {project.tech.slice(0, index === 0 ? 4 : 2).map((t) => (
+                    {(project.tech || []).slice(0, index === 0 ? 4 : 2).map((t: string) => (
                       <span key={t} className="font-mono text-xs text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
                         {t}
                       </span>
                     ))}
-                    {project.tech.length > (index === 0 ? 4 : 2) && (
+                    {(project.tech || []).length > (index === 0 ? 4 : 2) && (
                       <span className="font-mono text-xs text-muted-foreground px-2 py-1">+{project.tech.length - (index === 0 ? 4 : 2)}</span>
                     )}
                   </div>
