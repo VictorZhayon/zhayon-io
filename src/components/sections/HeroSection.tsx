@@ -17,11 +17,14 @@ export function HeroSection() {
   const headlinesList = heroData?.headlines || fallbackHeadlines;
   const greeting = heroData?.greeting || "Hi, I'm Victor.";
   const description = heroData?.description || (
-    <>
-      AI Engineer · Backend Engineer · Technical Writer · Tech Career Advisor
-      <br className="hidden md:block"/>
-      <span className="inline md:block mt-2 md:mt-0">Building digital experiences that combine stunning design with robust engineering.</span>
-    </>
+    <div className="flex flex-col gap-2 md:gap-3">
+      <span className="font-heading font-bold text-foreground text-lg sm:text-xl md:text-2xl tracking-wide">
+        Full-Stack AI Software Engineer <span className="text-primary/60 font-normal px-2">|</span> Technical Writer
+      </span>
+      <span className="text-muted-foreground text-base sm:text-lg leading-relaxed">
+        Building digital experiences that combine stunning design with robust engineering.
+      </span>
+    </div>
   );
 
   useEffect(() => {
@@ -63,13 +66,22 @@ export function HeroSection() {
           </div>
         </motion.a>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="font-mono text-muted-foreground text-base md:text-lg mb-4">
-          {greeting}
-        </motion.p>
+        <motion.h2
+          initial={{ opacity: 0, x: -20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="font-mono text-xl md:text-2xl text-muted-foreground mb-4 md:mb-6 flex items-center gap-3"
+        >
+          <span className="text-primary opacity-70">{"//"}</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-foreground to-muted-foreground font-medium tracking-wide">
+            {greeting}
+          </span>
+          <motion.span 
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+            className="inline-block w-2.5 h-6 bg-primary/80 ml-1 shadow-[0_0_10px_rgba(56,189,248,0.5)]"
+          />
+        </motion.h2>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -91,13 +103,13 @@ export function HeroSection() {
           </AnimatePresence>
         </motion.div>
         
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-muted-foreground text-base sm:text-lg md:text-xl max-w-2xl mb-10 md:mb-12 leading-relaxed">
+          className="max-w-2xl mb-10 md:mb-12">
           {description}
-        </motion.p>
+        </motion.div>
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
