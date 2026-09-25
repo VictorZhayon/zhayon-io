@@ -94,7 +94,7 @@ export function WritingSection() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 onClick={() => window.open(article.link, "_blank", "noopener,noreferrer")}
-                className={`group relative flex-shrink-0 w-[85vw] sm:w-[400px] md:w-[450px] min-h-[450px] bg-card/60 backdrop-blur-xl rounded-3xl p-4 md:p-6 border border-border/50 hover:border-primary/50 overflow-hidden transition-all duration-500 flex flex-col snap-center cursor-pointer`}
+                className={`group relative flex-shrink-0 w-[280px] sm:w-[400px] md:w-[450px] min-h-[450px] bg-card/60 backdrop-blur-xl rounded-3xl p-4 md:p-6 border border-border/50 hover:border-primary/50 overflow-hidden transition-all duration-500 flex flex-col snap-center cursor-pointer`}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-secondary/0 group-hover:from-primary/10 group-hover:via-primary/5 group-hover:to-secondary/10 transition-colors duration-700 pointer-events-none" />
                 

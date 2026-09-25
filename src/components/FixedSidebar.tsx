@@ -121,11 +121,30 @@ export function FixedSidebar() {
             </button>
           ))}
           <a
-            href="/Victor-Zion-CV-updated.pdf"
+            href="/Victor_Zion_CV.pdf"
             className="mt-4 border border-primary text-primary px-6 py-2 rounded font-mono text-sm hover:bg-primary/10 transition-colors"
           >
             Resume
           </a>
+
+          {/* Mobile Social Links */}
+          <div className="flex items-center gap-6 mt-8">
+            {socialLinks.map((social) => {
+              const Icon = iconMap[social.label];
+              return (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors duration-200 hover:-translate-y-1"
+                  aria-label={social.label}
+                >
+                  {Icon && <Icon size={24} />}
+                </a>
+              );
+            })}
+          </div>
         </div>
       )}
 
