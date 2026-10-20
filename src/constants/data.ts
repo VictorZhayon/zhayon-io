@@ -35,7 +35,7 @@ export const personalData = {
   name: "Victor Zion",
   alternateName: "Zhayon",
   title: "Software Engineer & Technical Writer",
-  subTitle: "CTO at Gem Nexus · Technical Writer at Hackmamba",
+  subTitle: "Technical Writer @ Devable · CTO @ Gem Nexus",
   email: "victorzion1@gmail.com",
   location: "Nigeria",
   headline: "I build what works. I write what lasts.",
@@ -43,7 +43,7 @@ export const personalData = {
   bioParagraphs: [
     "I'm a software engineer and technical writer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation.",
     "My focus lives at the intersection of AI engineering, distributed backend systems, and developer education. I specialize in designing and deploying LLM applications, RAG pipelines, and Docs-as-Code ecosystems that translate complex architectures into intuitive experiences.",
-    "Currently, I serve as Chief Technology Officer at Gem Nexus, guiding technical strategy and product roadmaps for next-generation developer talent, and work as a Technical Writer at Hackmamba migrating enterprise documentation to Mintlify."
+    "Currently, I serve as a Technical Writer at Devable driving developer marketing, SEO/AEO content strategy, and developer community distribution, and as Chief Technology Officer at Gem Nexus guiding technical vision and product roadmaps."
   ],
   resumes: [
     { label: "Backend & AI CV", href: "/Victor_Zion_Backend_AI.pdf" },
@@ -62,6 +62,17 @@ export const navLinks = [
 ];
 
 export const experiences: Experience[] = [
+  {
+    company: "Devable",
+    title: "Technical Writer",
+    period: "Oct 2026 — Present",
+    tech: ["Developer Marketing", "Content Strategy", "SEO / AEO", "Reddit Distribution", "Technical Writing"],
+    bullets: [
+      "Leading developer marketing, content strategy, and organic distribution across developer hubs including technical Reddit communities to accelerate product adoption.",
+      "Optimizing technical content for search engines (SEO) and modern answer engines (AEO), ensuring maximum visibility across search platforms and AI answer engines.",
+      "Authoring high-impact tutorials, developer guides, and educational articles that bridge complex product features with real-world developer workflows."
+    ]
+  },
   {
     company: "Gem Nexus",
     url: "https://www.gemnexushq.com",
@@ -250,8 +261,8 @@ export const skillCategories = [
     skills: ["AWS", "Google Cloud", "Docker", "Linux", "CI/CD", "Git & GitHub"]
   },
   {
-    name: "Docs & Developer Tools",
-    skills: ["Mintlify", "MDX", "Docs-as-Code", "Technical Writing", "SEO / AEO", "Vite"]
+    name: "Docs & Developer Growth",
+    skills: ["Mintlify", "MDX", "Docs-as-Code", "Technical Writing", "SEO / AEO", "Developer Marketing", "Reddit Distribution", "Vite"]
   }
 ];
 
