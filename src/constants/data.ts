@@ -9,11 +9,9 @@ export interface Project {
 
 export interface Experience {
   company: string;
-  url?: string;
   title: string;
   period: string;
-  tech: string[];
-  bullets: string[];
+  tech?: string[];
 }
 
 export interface Article {
@@ -43,7 +41,7 @@ export const personalData = {
   bioParagraphs: [
     "I'm a software engineer and technical writer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation.",
     "My focus lives at the intersection of AI engineering, distributed backend systems, and developer education. I specialize in designing and deploying LLM applications, RAG pipelines, and Docs-as-Code ecosystems that translate complex architectures into intuitive experiences.",
-    "Currently, I serve as a Technical Writer at Devable driving developer marketing, SEO/AEO content strategy, and developer community distribution, and as Chief Technology Officer at Gem Nexus guiding technical vision and product roadmaps."
+    "Currently, I serve as a Technical Writer at Devable driving developer marketing and content strategy, an AI Engineering Tutor at Innovation Labs (iLabs), and as Chief Technology Officer at Gem Nexus guiding technical vision and product roadmaps."
   ],
   resumes: [
     { label: "Backend & AI CV", href: "/Victor_Zion_Backend_AI.pdf" },
@@ -63,71 +61,46 @@ export const navLinks = [
 
 export const experiences: Experience[] = [
   {
+    role: "Technical Writer",
+    title: "Technical Writer",
     company: "Devable",
-    title: "Technical Writer",
-    period: "Oct 2026 — Present",
-    tech: ["Developer Marketing", "Content Strategy", "SEO / AEO", "Reddit Distribution", "Technical Writing"],
-    bullets: [
-      "Leading developer marketing, content strategy, and organic distribution across developer hubs including technical Reddit communities to accelerate product adoption.",
-      "Optimizing technical content for search engines (SEO) and modern answer engines (AEO), ensuring maximum visibility across search platforms and AI answer engines.",
-      "Authoring high-impact tutorials, developer guides, and educational articles that bridge complex product features with real-world developer workflows."
-    ]
+    period: "Oct 2026 — Present"
   },
   {
-    company: "Gem Nexus",
-    url: "https://www.gemnexushq.com",
+    role: "AI Engineering Tutor",
+    title: "AI Engineering Tutor",
+    company: "Innovation Labs (iLabs)",
+    period: "Sept 2026 — Present"
+  },
+  {
+    role: "Chief Technology Officer",
     title: "Chief Technology Officer",
-    period: "Dec 2025 — Present",
-    tech: ["Python", "JavaScript", "AWS", "PostgreSQL", "System Architecture"],
-    bullets: [
-      "Defining and driving the technical vision and infrastructure roadmap powering hands-on training ecosystems and digital learning products.",
-      "Leading engineering cycles from architecture to deployment, ensuring scalable and resilient product delivery.",
-      "Directing internal engineering teams and championing collaborative buildathons and mentorship for emerging talent."
-    ]
+    company: "Gem Nexus",
+    period: "Dec 2025 — Present"
   },
   {
-    company: "Hackmamba",
-    url: "https://hackmamba.io",
+    role: "Technical Writer",
     title: "Technical Writer",
-    period: "Oct 2025 — Present",
-    tech: ["Mintlify", "Markdown", "MDX", "Docs-as-Code", "SEO"],
-    bullets: [
-      "Migrated enterprise developer documentation (nTop, Coinbase, FrankieOne) to Mintlify, significantly improving content discoverability and navigation.",
-      "Collaborated with engineering teams to translate intricate API specifications and distributed system patterns into clear, actionable guides.",
-      "Contributed to measurable increases in developer engagement and organic search visibility through SEO/AEO-optimized content."
-    ]
+    company: "Hackmamba",
+    period: "Oct 2025 — Present"
   },
   {
-    company: "Morlabs Protocol",
+    role: "AI Engineer & Lead Technical Researcher",
     title: "AI Engineer & Lead Technical Researcher",
-    period: "Aug 2025 — Aug 2026",
-    tech: ["Python", "Solana", "Web3", "FastAPI", "Vector Search"],
-    bullets: [
-      "Led technical research and AI integration for a comprehensive directory of Solana SDKs and APIs, streamlining developer onboarding into the Web3 ecosystem.",
-      "Authored in-depth technical documentation detailing system architectures, cryptographic workflows, and SDK implementations.",
-      "Engineered AI-driven search and discovery tools that allow developers to quickly find, compare, and integrate protocol tools."
-    ]
+    company: "Morlabs Protocol",
+    period: "Aug 2025 — Aug 2026"
   },
   {
-    company: "Demz Aminytics",
+    role: "LLM Engineer",
     title: "LLM Engineer",
-    period: "Jan 2025 — Apr 2025",
-    tech: ["OpenAI", "Python", "AWS", "Whisper", "FastAPI"],
-    bullets: [
-      "Built and deployed an automated Markdown documentation generator using OpenAI o3-mini, cutting internal documentation time by 50%.",
-      "Developed an AI-powered screen recorder pipeline using faster-whisper and LLM summarization to generate action items and video recaps automatically.",
-      "Collaborated with backend teams to deploy and monitor containerized AI microservices on AWS with fault-tolerant error boundaries."
-    ]
+    company: "Demz Aminytics",
+    period: "Jan 2025 — Apr 2025"
   },
   {
-    company: "Wedigraf Technologies",
+    role: "Flutter Developer (Intern)",
     title: "Flutter Developer (Intern)",
-    period: "Jan 2022 — Jun 2022",
-    tech: ["Flutter", "Dart", "Firebase", "REST APIs"],
-    bullets: [
-      "Co-led a team of 5 in developing cross-platform mobile applications, implementing real-time chat, authentication, and push notifications.",
-      "Designed responsive UI components adapting seamlessly across diverse mobile screen dimensions."
-    ]
+    company: "Wedigraf Technologies",
+    period: "Jan 2022 — Jun 2022"
   }
 ];
 
@@ -250,7 +223,7 @@ export const skillCategories = [
   },
   {
     name: "AI & Machine Learning",
-    skills: ["LLM Engineering", "LangGraph", "RAG Systems", "OpenAI API", "Google Gemini API", "Whisper", "Prompt Engineering"]
+    skills: ["AI-Assisted Engineering", "LLM Engineering", "LangGraph", "RAG Systems", "OpenAI API", "Google Gemini API", "Prompt Engineering"]
   },
   {
     name: "Backend & Systems",
@@ -261,8 +234,8 @@ export const skillCategories = [
     skills: ["AWS", "Google Cloud", "Docker", "Linux", "CI/CD", "Git & GitHub"]
   },
   {
-    name: "Docs & Developer Growth",
-    skills: ["Mintlify", "MDX", "Docs-as-Code", "Technical Writing", "SEO / AEO", "Developer Marketing", "Reddit Distribution", "Vite"]
+    name: "Docs, Growth & Mentorship",
+    skills: ["Teaching & Mentorship", "Mintlify", "MDX", "Docs-as-Code", "Technical Writing", "SEO / AEO", "Developer Marketing", "Reddit Distribution"]
   }
 ];
 
