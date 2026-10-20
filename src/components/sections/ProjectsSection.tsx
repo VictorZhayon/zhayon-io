@@ -1,5 +1,5 @@
 import { featuredProjects, clientProjects } from "@/constants/data";
-import { ArrowUpRight, Github } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 
 export function ProjectsSection() {
   return (
@@ -51,9 +51,9 @@ export function ProjectsSection() {
               ))}
             </div>
 
-            {/* Links */}
-            <div className="flex items-center gap-4 text-xs font-medium pt-1 border-t border-border/30">
-              {project.live && (
+            {/* Live Link */}
+            {project.live && (
+              <div className="flex items-center gap-4 text-xs font-medium pt-2 border-t border-border/30">
                 <a
                   href={project.live}
                   target="_blank"
@@ -63,19 +63,8 @@ export function ProjectsSection() {
                   <span>Visit Application</span>
                   <ArrowUpRight size={13} />
                 </a>
-              )}
-              {project.github && (
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  <Github size={13} />
-                  <span>Source Code</span>
-                </a>
-              )}
-            </div>
+              </div>
+            )}
           </article>
         ))}
       </div>
