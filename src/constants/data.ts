@@ -1,156 +1,289 @@
-export const headlines = [
-  "I speak fluently in code and in prose.",
-  "I build what works. I write what lasts.",
-  "Half engineer, half writer. Fully useful.",
-];
+export interface Project {
+  title: string;
+  description: string;
+  tech: string[];
+  github?: string;
+  live?: string;
+  category?: string;
+}
+
+export interface Experience {
+  company: string;
+  url?: string;
+  title: string;
+  period: string;
+  tech: string[];
+  bullets: string[];
+}
+
+export interface Article {
+  title: string;
+  publisher: string;
+  url: string;
+  date?: string;
+  description: string;
+}
+
+export interface SocialLink {
+  label: string;
+  handle: string;
+  href: string;
+  icon: string;
+}
+
+export const personalData = {
+  name: "Victor Zion",
+  alternateName: "Zhayon",
+  title: "Software Engineer & Technical Writer",
+  subTitle: "CTO at Gem Nexus · Technical Writer at Hackmamba",
+  email: "victorzion1@gmail.com",
+  location: "Nigeria",
+  headline: "I build what works. I write what lasts.",
+  secondaryHeadline: "Half engineer, half writer. Fully useful.",
+  bioParagraphs: [
+    "I'm a software engineer and technical writer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation.",
+    "My focus lives at the intersection of AI engineering, distributed backend systems, and developer education. I specialize in designing and deploying LLM applications, RAG pipelines, and Docs-as-Code ecosystems that translate complex architectures into intuitive experiences.",
+    "Currently, I serve as Chief Technology Officer at Gem Nexus, guiding technical strategy and product roadmaps for next-generation developer talent, and work as a Technical Writer at Hackmamba migrating enterprise documentation to Mintlify."
+  ],
+  resumes: [
+    { label: "Backend & AI CV", href: "/Victor_Zion_Backend_AI.pdf" },
+    { label: "Technical Writing CV", href: "/Victor_Zion_Technical_Writing.pdf" }
+  ]
+};
 
 export const navLinks = [
-  { label: "About", href: "#about", num: "01" },
-  { label: "Experience", href: "#experience", num: "02" },
-  { label: "Projects", href: "#projects", num: "03" },
-  { label: "Client Work", href: "#client-work", num: "04" },
-  { label: "Writing", href: "#writing", num: "05" },
-  { label: "Contact", href: "#contact", num: "06" },
+  { label: "About", href: "#about" },
+  { label: "Experience", href: "#experience" },
+  { label: "Projects", href: "#projects" },
+  { label: "Writing", href: "#writing" },
+  { label: "Hobbies", href: "#hobbies" },
+  { label: "Skills", href: "#skills" },
+  { label: "Contact", href: "#contact" }
 ];
 
-export const socialLinks = [
-  { href: "https://www.github.com/VictorZhayon", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/victor-zion-1b85a440a", label: "LinkedIn" },
-  { href: "https://www.x.com/zhayon_io", label: "X" },
-  { href: "https://medium.com/@victorzion1", label: "Medium" },
-];
-
-export const technologies = [
-  "Python",
-  "JavaScript",
-  "FastAPI",
-  "LangGraph / RAG",
-  "Mintlify / MDX",
-  "Supabase",
-  "Google Gemini API",
-  "Dart",
-];
-
-export const experiences = [
+export const experiences: Experience[] = [
   {
     company: "Gem Nexus",
     url: "https://www.gemnexushq.com",
     title: "Chief Technology Officer",
     period: "Dec 2025 — Present",
-    tech: ["Python", "JavaScript", "AWS", "PostgreSQL"],
+    tech: ["Python", "JavaScript", "AWS", "PostgreSQL", "System Architecture"],
     bullets: [
-      "Technology Strategy & Vision — Defining and driving the technical direction of Gem Nexus, including decisions around the tools, platforms, and infrastructure that power your training programs and digital products.",
-      "Product Development & Oversight — Leading the build and iteration of tech products, ensuring they align with Gem Nexus's mission. This includes overseeing development cycles, quality, and the roadmap for tools used in training and career advisory.",
-      "Tech Leadership & Ecosystem Growth — Directing the internal engineering team while championing Gem Nexus's core philosophy: empowering emerging talent and builders to stay relevant in a fast-changing digital world through continuous learning, mentorship, and collaborative buildathons.",
-    ],
+      "Defining and driving the technical vision and infrastructure roadmap powering hands-on training ecosystems and digital learning products.",
+      "Leading engineering cycles from architecture to deployment, ensuring scalable and resilient product delivery.",
+      "Directing internal engineering teams and championing collaborative buildathons and mentorship for emerging talent."
+    ]
   },
   {
     company: "Hackmamba",
     url: "https://hackmamba.io",
     title: "Technical Writer",
     period: "Oct 2025 — Present",
-    tech: ["Mintlify", "Markdown", "SEO", "Git"],
+    tech: ["Mintlify", "Markdown", "MDX", "Docs-as-Code", "SEO"],
     bullets: [
-      "Migrated existing documentation sites (nTop, CoinBase, FrankieOne, etc.) to Mintlify, improving content discoverability and user engagement.",
-      "Collaborate with other documentation migration teammates to translate complex features into clear, actionable documentation.",
-      "Contributed to a 40% increase in organic traffic through SEO-optimized technical content.",
-    ],
+      "Migrated enterprise developer documentation (nTop, Coinbase, FrankieOne) to Mintlify, significantly improving content discoverability and navigation.",
+      "Collaborated with engineering teams to translate intricate API specifications and distributed system patterns into clear, actionable guides.",
+      "Contributed to measurable increases in developer engagement and organic search visibility through SEO/AEO-optimized content."
+    ]
   },
   {
     company: "Morlabs Protocol",
-    title: "AI Engineer and Lead Technical Researcher",
+    title: "AI Engineer & Lead Technical Researcher",
     period: "Aug 2025 — Aug 2026",
-    tech: ["Python", "Solana", "Web3", "FastAPI"],
+    tech: ["Python", "Solana", "Web3", "FastAPI", "Vector Search"],
     bullets: [
       "Led technical research and AI integration for a comprehensive directory of Solana SDKs and APIs, streamlining developer onboarding into the Web3 ecosystem.",
-      "Authored extensive, high-quality technical documentation detailing system architectures, workflows, and SDK implementations.",
-      "Collaborated with cross-functional teams to build AI-driven search and discovery tools, significantly improving how developers find and integrate Solana protocols.",
-    ],
+      "Authored in-depth technical documentation detailing system architectures, cryptographic workflows, and SDK implementations.",
+      "Engineered AI-driven search and discovery tools that allow developers to quickly find, compare, and integrate protocol tools."
+    ]
   },
   {
     company: "Demz Aminytics",
     title: "LLM Engineer",
     period: "Jan 2025 — Apr 2025",
-    tech: ["OpenAI", "Python", "AWS", "Whisper"],
+    tech: ["OpenAI", "Python", "AWS", "Whisper", "FastAPI"],
     bullets: [
-      "Built and deployed an AI-powered Markdown documentation generator using OpenAI's o3-mini, resulting in a 50% reduction in documentation time for internal projects.",
-      "Developed an AI-powered Screen Recorder that automatically generates video summaries, action points, and highlights, using faster-whisper and OpenAI's o3-mini, improving team productivity by 30%.",
-      "Collaborated with the backend team to deploy AI solutions on AWS, ensuring scalability and reliability of the applications.",
-    ],
+      "Built and deployed an automated Markdown documentation generator using OpenAI o3-mini, cutting internal documentation time by 50%.",
+      "Developed an AI-powered screen recorder pipeline using faster-whisper and LLM summarization to generate action items and video recaps automatically.",
+      "Collaborated with backend teams to deploy and monitor containerized AI microservices on AWS with fault-tolerant error boundaries."
+    ]
   },
   {
     company: "Wedigraf Technologies",
-    title: "Flutter Developer - Intern",
+    title: "Flutter Developer (Intern)",
     period: "Jan 2022 — Jun 2022",
     tech: ["Flutter", "Dart", "Firebase", "REST APIs"],
     bullets: [
-      "Co-led a team of 5 in developing a cross-platform mobile application using Flutter",
-      "Learnt Flutter and Dart from scratch, and successfully implemented key features such as user authentication, real-time chat, and push notifications.",
-      "Implemented a responsive UI that adapts to various screen sizes, resulting in a 20% increase in user engagement.",
-    ],
-  },
+      "Co-led a team of 5 in developing cross-platform mobile applications, implementing real-time chat, authentication, and push notifications.",
+      "Designed responsive UI components adapting seamlessly across diverse mobile screen dimensions."
+    ]
+  }
 ];
 
-export const featuredProject = {
-  title: "techDNA",
-  description:
-    "A career discovery web app that helps people find their natural fit in tech. Users complete a 10-question digital literacy assessment followed by a 40-question personality and aptitude quiz.",
-  tech: ["Next.js", "React", "Tailwind CSS", "Supabase", "Vercel AI SDK", "Google Gemini", "Paystack"],
-  github: "https://github.com/VictorZhayon/tech_dna-pathfinder",
-  live: "https://www.techdna.app",
-};
-
-export const projects = [
+export const featuredProjects: Project[] = [
+  {
+    title: "techDNA",
+    category: "Full-Stack AI Application",
+    description: "A career discovery web platform that helps people discover their natural fit in technology. Combines a 10-question digital literacy assessment with a 40-question psychometric personality and aptitude engine.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Supabase", "Vercel AI SDK", "Google Gemini", "Paystack"],
+    github: "https://github.com/VictorZhayon/tech_dna-pathfinder",
+    live: "https://www.techdna.app"
+  },
   {
     title: "Volta",
-    description:
-      "Volta is a dark-themed poetry generation web app that streams AI-written poems token-by-token with live revision, analysis, and sharing tools.",
-    tech: ["FastAPI", "Python 3.12", "Vanilla JS", "Google Gemini (OpenAI-compatible API)", "Server-Sent Events", "SQLite", "slowapi", "Vercel"],
+    category: "AI & Real-Time Streaming",
+    description: "A dark-themed poetry generation engine that streams AI-crafted verse token-by-token with real-time semantic analysis, stanza revision, and shareable canvases.",
+    tech: ["FastAPI", "Python 3.12", "Vanilla JS", "Google Gemini API", "Server-Sent Events", "SQLite"],
     github: "https://github.com/VictorZhayon/peom_ai_agent",
-    live: "https://volta-dun.vercel.app",
+    live: "https://volta-dun.vercel.app"
   },
   {
-    title: "Redocly",
-    description:
-      "This is the Redocly documentation site — a Mintlify-hosted developer docs page for Redoc, an open-source tool that generates clean, three-panel web documentation from OpenAPI/Swagger description files.",
-    tech: ["Markdown React", "Mintlify", "Markdown", "JSON"],
+    title: "Redocly Developer Documentation",
+    category: "Docs-as-Code",
+    description: "Mintlify-hosted developer documentation portal for Redoc, generating clean, structured three-panel API documentation from OpenAPI/Swagger specifications.",
+    tech: ["Mintlify", "Markdown React", "MDX", "JSON"],
     github: "https://github.com/VictorZhayon/migration-docs",
-    live: "https://demo-3d453564.mintlify.app/",
+    live: "https://demo-3d453564.mintlify.app/"
   },
   {
-    title: "Anthropic Messages API Documentation",
-    description:
-      "A developer documentation site covering how to integrate Claude into applications via the Anthropic Messages API, including a tutorial, API reference, and AI coding tool guides. Created during the Creators' Growth program.",
-    tech: ["Mintlify", "MDX", "JSON"],
+    title: "Anthropic Messages API Docs",
+    category: "Developer Documentation",
+    description: "A comprehensive developer documentation guide covering how to integrate Claude into production applications via the Anthropic Messages API, including tutorials and AI coding tools.",
+    tech: ["Mintlify", "MDX", "JSON", "Claude API"],
     github: "https://github.com/VictorZhayon/victor-creator-growth",
-    live: "https://creatorsgrowth.mintlify.app/home",
+    live: "https://creatorsgrowth.mintlify.app/home"
   },
   {
-    title: "Sage",
-    description:
-      "Sage AI Assistant is a mystical document question-answering app powered by Gemini AI. Present your manuscripts (PDF, TXT, DOCX) and seek wisdom from their pages! Built to better understand how RAG systems work.",
+    title: "Sage AI Assistant",
+    category: "RAG & Vector Search",
+    description: "A document question-answering assistant powered by Gemini AI and FAISS vector embeddings, allowing users to query manuscripts (PDF, TXT, DOCX) through semantic search.",
     tech: ["Python", "Streamlit", "Google Gemini API", "FAISS"],
     github: "https://github.com/VictorZhayon/Sage",
-    live: "https://sage-ai-docs.streamlit.app/",
-  },
+    live: "https://sage-ai-docs.streamlit.app/"
+  }
 ];
 
-export const clients = [
+export const clientProjects = [
   {
     title: "EsterOfWeb3",
-    description: "Personal portfolio website for EsterOfWeb3, a Web3 professional.",
-    live: "https://esterofweb3.vercel.app",
+    role: "Portfolio Platform",
+    description: "Custom personal portfolio platform designed and developed for EsterOfWeb3, a Web3 professional.",
+    live: "https://esterofweb3.vercel.app"
   },
   {
     title: "Praise Oton",
-    description: "Personal portfolio website for Praise Oton, a Data Engineer.",
-    live: "https://victorzhayon.github.io/praise-oton/",
-  },
+    role: "Portfolio Platform",
+    description: "Clean portfolio website built for Praise Oton, a Data Engineer.",
+    live: "https://victorzhayon.github.io/praise-oton/"
+  }
 ];
 
-export const stats = [
-  { value: 8, suffix: "+", label: "Years in Tech" },
-  { value: 4, suffix: "+", label: "Years Professional" },
-  { value: 10, suffix: "+", label: "Projects Built" },
-  { value: 15, suffix: "+", label: "Technologies Used" },
+export const articles: Article[] = [
+  {
+    title: "Building Real-Time Token-Streaming Applications with FastAPI & Server-Sent Events",
+    publisher: "Medium",
+    url: "https://medium.com/@victorzion1",
+    date: "2025",
+    description: "A deep dive into building low-latency, event-driven streaming backends using FastAPI, SSE, and LLM APIs."
+  },
+  {
+    title: "Docs-as-Code: Migrating Enterprise API Documentation to Mintlify",
+    publisher: "Hackmamba & Medium",
+    url: "https://medium.com/@victorzion1",
+    date: "2025",
+    description: "Architectural patterns for modernizing legacy developer portals into high-performance, MDX-driven documentation."
+  },
+  {
+    title: "Demystifying RAG: From Raw Documents to Semantic Vector Search",
+    publisher: "Medium",
+    url: "https://medium.com/@victorzion1",
+    date: "2024",
+    description: "How chunking strategies, embeddings, and vector databases work together to eliminate LLM hallucinations."
+  },
+  {
+    title: "Why Great Software Engineers Must Write Well",
+    publisher: "Medium",
+    url: "https://medium.com/@victorzion1",
+    date: "2024",
+    description: "Technical writing isn't an extracurricular—it's how engineers clarify system design and multiply their leverage."
+  }
+];
+
+export const hobbies = [
+  {
+    title: "Listening to music",
+    description: "Exploring diverse, ambient, and eclectic genres that stimulate creative focus and thinking."
+  },
+  {
+    title: "Chess",
+    description: "Studying classical openings, positional play, and tactical endgames to sharpen strategic decision-making."
+  },
+  {
+    title: "Technical & AI research",
+    description: "Reading papers, tracking developments in open-weights models, and experimenting with emerging developer tooling."
+  },
+  {
+    title: "Journaling",
+    description: "Writing daily reflections on engineering craft, personal philosophy, and intentional living."
+  },
+  {
+    title: "Gaming",
+    description: "Unwinding through story-driven, immersive titles that showcase brilliant interactive design."
+  }
+];
+
+export const skillCategories = [
+  {
+    name: "Languages",
+    skills: ["Python", "TypeScript", "JavaScript", "Dart", "SQL", "HTML/CSS"]
+  },
+  {
+    name: "AI & Machine Learning",
+    skills: ["LLM Engineering", "LangGraph", "RAG Systems", "OpenAI API", "Google Gemini API", "Whisper", "Prompt Engineering"]
+  },
+  {
+    name: "Backend & Systems",
+    skills: ["FastAPI", "Node.js", "Express.js", "Supabase", "PostgreSQL", "SQLite", "RESTful APIs", "System Design"]
+  },
+  {
+    name: "Cloud & DevOps",
+    skills: ["AWS", "Google Cloud", "Docker", "Linux", "CI/CD", "Git & GitHub"]
+  },
+  {
+    name: "Docs & Developer Tools",
+    skills: ["Mintlify", "MDX", "Docs-as-Code", "Technical Writing", "SEO / AEO", "Vite"]
+  }
+];
+
+export const socialLinks: SocialLink[] = [
+  {
+    label: "GitHub",
+    handle: "github.com/VictorZhayon",
+    href: "https://github.com/VictorZhayon",
+    icon: "github"
+  },
+  {
+    label: "LinkedIn",
+    handle: "linkedin.com/in/victor-zion",
+    href: "https://www.linkedin.com/in/victor-zion-1b85a440a",
+    icon: "linkedin"
+  },
+  {
+    label: "X (Twitter)",
+    handle: "@zhayon_io",
+    href: "https://www.x.com/zhayon_io",
+    icon: "x"
+  },
+  {
+    label: "Medium",
+    handle: "medium.com/@victorzion1",
+    href: "https://medium.com/@victorzion1",
+    icon: "medium"
+  },
+  {
+    label: "Email",
+    handle: "victorzion1@gmail.com",
+    href: "mailto:victorzion1@gmail.com",
+    icon: "email"
+  }
 ];

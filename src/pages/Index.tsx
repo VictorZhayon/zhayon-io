@@ -1,35 +1,27 @@
-import { FixedSidebar } from "@/components/FixedSidebar";
-import { CursorGlow } from "@/components/CursorGlow";
-import { TechBackground } from "@/components/TechBackground";
-import { BackToTop } from "@/components/BackToTop";
+import { Navbar } from "@/components/Navbar";
 import { HeroSection } from "@/components/sections/HeroSection";
-import { AboutSection } from "@/components/sections/AboutSection";
-import { StatsSection } from "@/components/sections/StatsSection";
 import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { ProjectsSection } from "@/components/sections/ProjectsSection";
-import { ClientWorkSection } from "@/components/sections/ClientWorkSection";
 import { WritingSection } from "@/components/sections/WritingSection";
+import { HobbiesSection } from "@/components/sections/HobbiesSection";
+import { SkillsSection } from "@/components/sections/SkillsSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FooterSection } from "@/components/sections/FooterSection";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
-      <TechBackground />
-      <CursorGlow />
-      <FixedSidebar />
-      <main id="main-content" className="lg:ml-[35%] lg:max-w-[65%] px-6 sm:px-12 lg:px-16 xl:px-24 pt-20 lg:pt-0">
+    <div className="min-h-screen bg-background text-foreground antialiased selection:bg-foreground/15 selection:text-foreground">
+      <Navbar />
+      <main id="main-content" className="max-w-content mx-auto px-6">
         <HeroSection />
-        <AboutSection />
-        <StatsSection />
         <ExperienceSection />
         <ProjectsSection />
-        <ClientWorkSection />
         <WritingSection />
+        <HobbiesSection />
+        <SkillsSection />
         <ContactSection />
         <FooterSection />
       </main>
-      <BackToTop />
     </div>
   );
 };
