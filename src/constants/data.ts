@@ -41,11 +41,7 @@ export const personalData = {
   bioParagraphs: [
     "I'm a software engineer and technical writer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation.",
     "My focus lives at the intersection of AI engineering, distributed backend systems, and developer education. I specialize in designing and deploying LLM applications, RAG pipelines, and Docs-as-Code ecosystems that translate complex architectures into intuitive experiences.",
-    "Currently, I serve as a Technical Writer at Devable driving developer marketing and content strategy, an AI Engineering Tutor at Innovation Labs (iLabs), and as Chief Technology Officer at Gem Nexus guiding technical vision and product roadmaps."
-  ],
-  resumes: [
-    { label: "Backend & AI CV", href: "/Victor_Zion_Backend_AI.pdf" },
-    { label: "Technical Writing CV", href: "/Victor_Zion_Technical_Writing.pdf" }
+    "Beyond code and documentation, I'm deeply interested in artificial intelligence, technical research, music, and continuous personal development—exploring ideas that shape both my craft and how I think."
   ]
 };
 
@@ -61,43 +57,46 @@ export const navLinks = [
 
 export const experiences: Experience[] = [
   {
-    role: "Technical Writer",
     title: "Technical Writer",
     company: "Devable",
     period: "Oct 2026 — Present"
   },
   {
-    role: "AI Engineering Tutor",
-    title: "AI Engineering Tutor",
+    title: "Founding Full-Stack Engineer",
+    company: "Ibok AI",
+    period: "Sept 2026 — Present"
+  },
+  {
+    title: "AI Engineering Tutor & Ambassador",
     company: "Innovation Labs (iLabs)",
     period: "Sept 2026 — Present"
   },
   {
-    role: "Chief Technology Officer",
     title: "Chief Technology Officer",
     company: "Gem Nexus",
     period: "Dec 2025 — Present"
   },
   {
-    role: "Technical Writer",
     title: "Technical Writer",
     company: "Hackmamba",
     period: "Oct 2025 — Present"
   },
   {
-    role: "AI Engineer & Lead Technical Researcher",
     title: "AI Engineer & Lead Technical Researcher",
     company: "Morlabs Protocol",
-    period: "Aug 2025 — Aug 2026"
+    period: "Apr 2025 — Aug 2026"
   },
   {
-    role: "LLM Engineer",
     title: "LLM Engineer",
     company: "Demz Aminytics",
     period: "Jan 2025 — Apr 2025"
   },
   {
-    role: "Flutter Developer (Intern)",
+    title: "Full-Stack & Mobile Developer (Intern)",
+    company: "Selina M.",
+    period: "Oct 2022 — Jan 2023"
+  },
+  {
     title: "Flutter Developer (Intern)",
     company: "Wedigraf Technologies",
     period: "Jan 2022 — Jun 2022"

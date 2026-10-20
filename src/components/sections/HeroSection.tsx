@@ -1,6 +1,6 @@
 import { personalData } from "@/constants/data";
 import profileImg from "@/assets/profile.jpg";
-import { Mail, ArrowDownToLine, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -40,7 +40,7 @@ export function HeroSection() {
         ))}
       </div>
 
-      {/* Quick Action Links */}
+      {/* Quick Action Links - Email, GitHub, LinkedIn */}
       <div className="flex flex-wrap items-center gap-3 pt-2">
         <a
           href={`mailto:${personalData.email}`}
@@ -50,26 +50,24 @@ export function HeroSection() {
           <span>Say Hello</span>
         </a>
 
-        {personalData.resumes.map((cv) => (
-          <a
-            key={cv.label}
-            href={cv.href}
-            download
-            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-border bg-card/40 hover:bg-card text-foreground text-xs font-medium transition-colors"
-          >
-            <ArrowDownToLine size={13} className="text-muted-foreground" />
-            <span>{cv.label}</span>
-          </a>
-        ))}
-
         <a
           href="https://github.com/VictorZhayon"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 px-3 py-2 text-xs text-muted-foreground hover:text-foreground transition-colors ml-auto sm:ml-0"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-border bg-card/40 hover:bg-card text-foreground text-xs font-medium transition-colors"
         >
           <span>GitHub</span>
-          <ArrowUpRight size={13} />
+          <ArrowUpRight size={13} className="text-muted-foreground" />
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/victor-zion-1b85a440a"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-border bg-card/40 hover:bg-card text-foreground text-xs font-medium transition-colors"
+        >
+          <span>LinkedIn</span>
+          <ArrowUpRight size={13} className="text-muted-foreground" />
         </a>
       </div>
     </section>
