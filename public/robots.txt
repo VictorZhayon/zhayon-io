@@ -12,3 +12,7 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# LLMs.txt for AI agents and Generative Engine Optimization (GEO)
+# Specification: https://llmstxt.org/
+Sitemap: https://zhayon.io/llms.txt

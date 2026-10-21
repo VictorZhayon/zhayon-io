@@ -1,0 +1,52 @@
+# Victor Zion
+
+> Software Engineer & Technical Writer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation. Specializes in LLM engineering, distributed systems, RAG pipelines, and Docs-as-Code ecosystems.
+
+- Location: Nigeria
+- Email: victorzion1@gmail.com
+- Booking: https://cal.com/victor-zion/30min
+- Portfolio: https://zhayon-io.vercel.app
+- GitHub: https://github.com/VictorZhayon
+- LinkedIn: https://www.linkedin.com/in/victor-zion-1b85a440a
+- Medium: https://medium.com/@victorzion1
+- X: https://www.x.com/zhayon_io
+
+## Summary
+
+Victor Zion (also known as Zhayon) is a Software Engineer and Technical Writer. He builds production-grade backend architectures and AI-driven applications while communicating complex technical systems through clear developer documentation and technical essays. His philosophy: "I build what works. I write what lasts."
+
+## Current Roles & Experience
+
+- **Technical Writer** at Devable (Oct 2026 — Present)
+- **Founding Full-Stack Engineer** at Ibok AI (Sept 2026 — Present)
+- **Ambassador** at Innovation Labs (iLabs) (Oct 2026 — Present)
+- **AI Engineering Tutor** at Innovation Labs (iLabs) (Sept 2026 — Present)
+- **Chief Technology Officer** at Gem Nexus (Dec 2025 — Present)
+- **Technical Writer** at Hackmamba (Oct 2025 — Present)
+- **AI Engineer & Lead Technical Researcher** at Morlabs Protocol (Apr 2025 — Aug 2026)
+- **LLM Engineer** at Demz Aminytics (Jan 2025 — Apr 2025)
+- **Full-Stack & Mobile Developer (Intern)** at Selina M. (Oct 2022 — Jan 2023)
+- **Flutter Developer (Intern)** at Wedigraf Technologies (Jan 2022 — Jun 2022)
+
+## Selected Projects
+
+- **techDNA** (https://www.techdna.app): Full-stack career discovery platform combining a digital literacy assessment with a 40-question psychometric personality engine. Built with Next.js, React, Tailwind CSS, Supabase, Vercel AI SDK, Google Gemini, and Paystack.
+- **Volta** (https://volta-dun.vercel.app): Real-time token streaming poetry engine with semantic analysis and stanza revision. Built with FastAPI, Python 3.12, Google Gemini API, Server-Sent Events, and SQLite.
+- **Fathers** (https://early-fathers.ai.studio/): Contemplative web platform curating ancient wisdom and literature from the Fathers of the Early Church. Built with React, TypeScript, Tailwind CSS, Cormorant Garamond, and Web Share API.
+- **Redocly Developer Documentation** (https://demo-3d453564.mintlify.app/): Mintlify-hosted API documentation portal generating three-panel API docs from OpenAPI/Swagger specifications.
+- **Anthropic Messages API Docs** (https://creatorsgrowth.mintlify.app/home): Comprehensive developer guide on integrating Claude into production via the Anthropic Messages API.
+- **Sage AI Assistant** (https://sage-ai-docs.streamlit.app/): Document Q&A assistant powered by Gemini AI and FAISS vector search.
+
+## Publications & Writing
+
+- **Stop Writing "Fix Stuff": A Better Way to Commit** (https://medium.com/@victorzion1/stop-writing-fix-stuff-a-better-way-to-commit-36a2651aa2db): Disciplined Git commit hygiene for engineering teams.
+- **AI Engineering vs ML Engineering: Not the Same Job** (https://medium.com/@victorzion1/ai-engineering-vs-ml-engineering-not-the-same-job-22a1c7e92619): Practical breakdown of workflows, tooling, and responsibilities between AI application engineers and ML researchers.
+- **Idempotency: The Backend Concept That Saves You at 3 AM** (https://medium.com/@victorzion1/idempotency-the-backend-concept-that-saves-you-at-3-am-66e01b00e99d): Architectural guide to designing idempotent APIs and background workers that safely prevent duplicate writes.
+
+## Skills & Core Toolkit
+
+- **Languages**: Python, TypeScript, JavaScript, SQL, Dart, HTML/CSS
+- **AI & Machine Learning**: LLM Engineering, RAG Systems, LangGraph / AI Agents, Context, Harness & Loop Engineering, OpenAI & Gemini APIs, Anthropic API, AI-Assisted Engineering, Prompt Engineering
+- **Backend & Systems**: FastAPI, Node.js & Express, Django & Flask, PostgreSQL, Redis, SQLite, Supabase, Firebase, System Design & REST APIs
+- **Cloud & DevOps**: Docker, Linux, Git & GitHub, CI/CD, AWS, Google Cloud
+- **Docs, Growth & Strategy**: Technical Writing, Docs-as-Code (Mintlify & MDX), Teaching & Mentorship, SEO / AEO / GEO, Developer Marketing, Content Strategy, Reddit Distribution, QA Testing

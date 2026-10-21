@@ -8,7 +8,7 @@ export function FooterSection() {
           <span>© {new Date().getFullYear()} {personalData.name}.</span>
           <span className="ml-2 text-muted-foreground/60">Crafted with intent.</span>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex flex-wrap items-center gap-3 sm:gap-4">
           <a
             href={`mailto:${personalData.email}`}
             className="hover:text-foreground transition-colors"
@@ -26,12 +26,22 @@ export function FooterSection() {
           </a>
           <span>·</span>
           <a
-            href="https://x.com/zhayon_io"
+            href="https://www.linkedin.com/in/victor-zion-1b85a440a"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-foreground transition-colors"
           >
-            X
+            LinkedIn
+          </a>
+          <span>·</span>
+          <a
+            href="/llms.txt"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-foreground transition-colors"
+            title="LLM-readable site manifest"
+          >
+            llms.txt
           </a>
         </div>
       </div>
