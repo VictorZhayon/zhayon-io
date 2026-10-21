@@ -214,23 +214,58 @@ export const hobbies = [
 export const skillCategories = [
   {
     name: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript", "Dart", "SQL", "HTML/CSS"]
+    skills: ["Python", "TypeScript", "JavaScript", "SQL", "Dart", "HTML/CSS"]
   },
   {
     name: "AI & Machine Learning",
-    skills: ["AI-Assisted Engineering", "LLM Engineering", "LangGraph", "RAG Systems", "OpenAI API", "Google Gemini API", "Prompt Engineering"]
+    skills: [
+      "LLM Engineering",
+      "RAG Systems",
+      "LangGraph / AI Agents",
+      "Context, Harness & Loop Engineering",
+      "OpenAI & Gemini APIs",
+      "Anthropic API",
+      "AI-Assisted Engineering",
+      "Prompt Engineering"
+    ]
   },
   {
     name: "Backend & Systems",
-    skills: ["FastAPI", "Node.js", "Express.js", "Supabase", "PostgreSQL", "SQLite", "RESTful APIs", "System Design"]
+    skills: [
+      "FastAPI",
+      "Node.js & Express",
+      "Django & Flask",
+      "PostgreSQL",
+      "Redis",
+      "SQLite",
+      "Supabase",
+      "Firebase",
+      "System Design & REST APIs"
+    ]
   },
   {
     name: "Cloud & DevOps",
-    skills: ["AWS", "Google Cloud", "Docker", "Linux", "CI/CD", "Git & GitHub"]
+    skills: [
+      "Docker",
+      "Linux",
+      "Git & GitHub",
+      "CI/CD",
+      "AWS",
+      "Google Cloud"
+    ]
   },
   {
-    name: "Docs, Growth & Mentorship",
-    skills: ["Teaching & Mentorship", "Mintlify", "MDX", "Docs-as-Code", "Technical Writing", "SEO / AEO", "Developer Marketing", "Reddit Distribution"]
+    name: "Docs, Growth & Strategy",
+    skills: [
+      "Technical Writing",
+      "Docs-as-Code (Mintlify & MDX)",
+      "Teaching & Mentorship",
+      "SEO / AEO / GEO",
+      "Developer Marketing",
+      "Content Strategy",
+      "Reddit Distribution",
+      "QA Testing"
+    ]
   }
 ];
 
