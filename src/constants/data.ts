@@ -41,6 +41,7 @@ export const personalData = {
   title: "Software Engineer & Technical Writer",
   subTitle: "Technical Writer @ Devable · CTO @ Gem Nexus",
   email: "victorzion1@gmail.com",
+  bookingUrl: "https://cal.com/victor-zion/30min",
   location: "Nigeria",
   headline: "I build what works. I write what lasts.",
   secondaryHeadline: "Half engineer, half writer. Fully useful.",
@@ -283,16 +284,22 @@ export const socialLinks: SocialLink[] = [
     icon: "linkedin"
   },
   {
-    label: "X (Twitter)",
-    handle: "@zhayon_io",
-    href: "https://www.x.com/zhayon_io",
-    icon: "x"
+    label: "Cal.com",
+    handle: "cal.com/victor-zion/30min",
+    href: "https://cal.com/victor-zion/30min",
+    icon: "calendar"
   },
   {
     label: "Medium",
     handle: "medium.com/@victorzion1",
     href: "https://medium.com/@victorzion1",
     icon: "medium"
+  },
+  {
+    label: "X (Twitter)",
+    handle: "@zhayon_io",
+    href: "https://www.x.com/zhayon_io",
+    icon: "x"
   },
   {
     label: "Email",

@@ -1,6 +1,6 @@
 import { personalData } from "@/constants/data";
 import profileImg from "@/assets/profile.jpg";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, Calendar, ArrowUpRight } from "lucide-react";
 
 export function HeroSection() {
   return (
@@ -40,7 +40,7 @@ export function HeroSection() {
         ))}
       </div>
 
-      {/* Quick Action Links - Email, GitHub, LinkedIn */}
+      {/* Quick Action Links - Email, Book a Call, GitHub, LinkedIn */}
       <div className="flex flex-wrap items-center gap-3 pt-2">
         <a
           href={`mailto:${personalData.email}`}
@@ -48,6 +48,17 @@ export function HeroSection() {
         >
           <Mail size={14} />
           <span>Say Hello</span>
+        </a>
+
+        <a
+          href={personalData.bookingUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg border border-border bg-card/40 hover:bg-card text-foreground text-xs font-medium transition-colors"
+        >
+          <Calendar size={13} className="text-muted-foreground" />
+          <span>Book a Call</span>
+          <ArrowUpRight size={13} className="text-muted-foreground" />
         </a>
 
         <a

@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { socialLinks, personalData } from "@/constants/data";
-import { ArrowUpRight, Github, Linkedin, Twitter, BookOpen, Mail, Copy, Check } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Twitter, BookOpen, Mail, Copy, Check, Calendar } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
   github: <Github size={16} />,
   linkedin: <Linkedin size={16} />,
-  x: <Twitter size={16} />,
+  calendar: <Calendar size={16} />,
   medium: <BookOpen size={16} />,
+  x: <Twitter size={16} />,
   email: <Mail size={16} />,
 };
 
@@ -28,18 +29,31 @@ export function ContactSection() {
         <p className="text-foreground/80 text-[15px] sm:text-base leading-relaxed mb-4">
           I'm always open to discussing new technical leadership opportunities, distributed architectures, AI integrations, or documentation projects.
         </p>
-        <div className="inline-flex items-center gap-3 p-3 px-4 rounded-xl border border-border bg-card/30">
-          <span className="font-mono text-xs sm:text-sm text-foreground">
-            {personalData.email}
-          </span>
-          <button
-            onClick={handleCopy}
-            className="p-1.5 rounded-md hover:bg-card text-muted-foreground hover:text-foreground transition-colors"
-            title="Copy email to clipboard"
-            aria-label="Copy email address"
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="inline-flex items-center gap-3 p-3 px-4 rounded-xl border border-border bg-card/30">
+            <span className="font-mono text-xs sm:text-sm text-foreground">
+              {personalData.email}
+            </span>
+            <button
+              onClick={handleCopy}
+              className="p-1.5 rounded-md hover:bg-card text-muted-foreground hover:text-foreground transition-colors"
+              title="Copy email to clipboard"
+              aria-label="Copy email address"
+            >
+              {copied ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
+            </button>
+          </div>
+
+          <a
+            href={personalData.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 p-3 px-4 rounded-xl border border-border bg-card/30 hover:bg-card/60 text-foreground text-xs sm:text-sm font-medium transition-colors group"
           >
-            {copied ? <Check size={14} className="text-emerald-500" /> : <Copy size={14} />}
-          </button>
+            <Calendar size={15} className="text-muted-foreground group-hover:text-foreground" />
+            <span>Book a 30-min call</span>
+            <ArrowUpRight size={14} className="text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </a>
         </div>
       </div>
 
