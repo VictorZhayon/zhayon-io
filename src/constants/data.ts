@@ -163,32 +163,25 @@ export const clientProjects = [
 
 export const articles: Article[] = [
   {
-    title: "Building Real-Time Token-Streaming Applications with FastAPI & Server-Sent Events",
+    title: "Stop Writing “Fix Stuff”: A Better Way to Commit",
     publisher: "Medium",
-    url: "https://medium.com/@victorzion1",
-    date: "2025",
-    description: "A deep dive into building low-latency, event-driven streaming backends using FastAPI, SSE, and LLM APIs."
+    url: "https://medium.com/@victorzion1/stop-writing-fix-stuff-a-better-way-to-commit-36a2651aa2db",
+    date: "Aug 2026",
+    description: "Why disciplined git commit messages matter, how to write them effectively, and how clean commit hygiene prevents chaos in engineering teams."
   },
   {
-    title: "Docs-as-Code: Migrating Enterprise API Documentation to Mintlify",
-    publisher: "Hackmamba & Medium",
-    url: "https://medium.com/@victorzion1",
-    date: "2025",
-    description: "Architectural patterns for modernizing legacy developer portals into high-performance, MDX-driven documentation."
+    title: "AI Engineering vs ML Engineering: Not the Same Job",
+    publisher: "Medium",
+    url: "https://medium.com/@victorzion1/ai-engineering-vs-ml-engineering-not-the-same-job-22a1c7e92619",
+    date: "Jul 2026",
+    description: "Deconstructing the distinct differences in day-to-day workflows, tooling, and expectations between AI application engineers and machine learning researchers."
   },
   {
-    title: "Demystifying RAG: From Raw Documents to Semantic Vector Search",
+    title: "Idempotency: The Backend Concept That Saves You at 3 AM",
     publisher: "Medium",
-    url: "https://medium.com/@victorzion1",
-    date: "2024",
-    description: "How chunking strategies, embeddings, and vector databases work together to eliminate LLM hallucinations."
-  },
-  {
-    title: "Why Great Software Engineers Must Write Well",
-    publisher: "Medium",
-    url: "https://medium.com/@victorzion1",
-    date: "2024",
-    description: "Technical writing isn't an extracurricular—it's how engineers clarify system design and multiply their leverage."
+    url: "https://medium.com/@victorzion1/idempotency-the-backend-concept-that-saves-you-at-3-am-66e01b00e99d",
+    date: "Jul 2026",
+    description: "A practical guide to designing idempotent APIs and background workers that safely prevent duplicate transactions, double writes, and midnight outages."
   }
 ];
 

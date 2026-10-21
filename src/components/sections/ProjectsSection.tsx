@@ -1,4 +1,4 @@
-import { featuredProjects, clientProjects } from "@/constants/data";
+import { featuredProjects } from "@/constants/data";
 import { ArrowUpRight } from "lucide-react";
 
 export function ProjectsSection() {
@@ -67,34 +67,6 @@ export function ProjectsSection() {
             )}
           </article>
         ))}
-      </div>
-
-      {/* Client Works Sub-block */}
-      <div className="mt-10 pt-8 border-t border-border/50">
-        <p className="font-mono text-xs text-muted-foreground uppercase tracking-widest mb-4">
-          Client Platforms & Portfolios
-        </p>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {clientProjects.map((client) => (
-            <a
-              key={client.title}
-              href={client.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-4 rounded-xl border border-border/40 bg-card/10 hover:bg-card/40 hover:border-border transition-all block group"
-            >
-              <div className="flex items-center justify-between mb-1">
-                <span className="font-medium text-sm text-foreground group-hover:text-primary transition-colors">
-                  {client.title}
-                </span>
-                <ArrowUpRight size={14} className="text-muted-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </div>
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                {client.description}
-              </p>
-            </a>
-          ))}
-        </div>
       </div>
     </section>
   );

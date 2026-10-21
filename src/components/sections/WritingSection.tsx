@@ -11,7 +11,7 @@ export function WritingSection() {
       </p>
 
       <div className="divide-y divide-border/60">
-        {articles.map((article) => (
+        {articles.slice(0, 3).map((article) => (
           <article key={article.title} className="py-6 first:pt-0 last:pb-0 group">
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
               <h3 className="text-base font-medium text-foreground">
@@ -47,7 +47,7 @@ export function WritingSection() {
           className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors group"
         >
           <BookOpen size={14} />
-          <span>Read more essays on Medium</span>
+          <span>Read more articles on Medium</span>
           <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
         </a>
       </div>
