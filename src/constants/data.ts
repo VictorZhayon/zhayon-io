@@ -136,6 +136,13 @@ export const featuredProjects: Project[] = [
     live: "https://volta-dun.vercel.app"
   },
   {
+    title: "Fathers",
+    category: "Contemplative Web Platform",
+    description: "A quiet, reflective digital collection of words and wisdom from the Fathers of the Early Church. Features random quotation discovery, favorites curation, ambient theme switching, and native social sharing.",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Cormorant Garamond", "Web Share API"],
+    live: "https://early-fathers.ai.studio/"
+  },
+  {
     title: "Redocly Developer Documentation",
     category: "Docs-as-Code",
     description: "Mintlify-hosted developer documentation portal for Redoc, generating clean, structured three-panel API documentation from OpenAPI/Swagger specifications.",
