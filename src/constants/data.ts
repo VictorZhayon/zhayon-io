@@ -146,21 +146,6 @@ export const featuredProjects: Project[] = [
   }
 ];
 
-export const clientProjects = [
-  {
-    title: "EsterOfWeb3",
-    role: "Portfolio Platform",
-    description: "Custom personal portfolio platform designed and developed for EsterOfWeb3, a Web3 professional.",
-    live: "https://esterofweb3.vercel.app"
-  },
-  {
-    title: "Praise Oton",
-    role: "Portfolio Platform",
-    description: "Clean portfolio website built for Praise Oton, a Data Engineer.",
-    live: "https://victorzhayon.github.io/praise-oton/"
-  }
-];
-
 export const articles: Article[] = [
   {
     title: "Stop Writing “Fix Stuff”: A Better Way to Commit",
@@ -187,24 +172,28 @@ export const articles: Article[] = [
 
 export const hobbies = [
   {
-    title: "Listening to music",
-    description: "Exploring diverse, ambient, and eclectic genres that stimulate creative focus and thinking."
+    title: "Music",
+    description: "Exploring diverse genres spanning from Gospel, Jazz, Classical, Neoclassical, etc that stimulate creative focus and thinking."
   },
   {
     title: "Chess",
     description: "Studying classical openings, positional play, and tactical endgames to sharpen strategic decision-making."
   },
   {
-    title: "Technical & AI research",
-    description: "Reading papers, tracking developments in open-weights models, and experimenting with emerging developer tooling."
+    title: "Research",
+    description: "Reading papers, tracking developments in AI, Tech, Finance, Philosophy, etc."
   },
   {
     title: "Journaling",
-    description: "Writing daily reflections on engineering craft, personal philosophy, and intentional living."
+    description: "Writing daily reflections on personal philosophy, and intentional living."
   },
   {
     title: "Gaming",
     description: "Unwinding through story-driven, immersive titles that showcase brilliant interactive design."
+  },
+  {
+    title: "Fitness",
+    description: "Mostly calisthenics and keeping fit in ways backed up by science."
   }
 ];
 

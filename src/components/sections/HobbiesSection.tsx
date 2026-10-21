@@ -1,12 +1,13 @@
 import { hobbies } from "@/constants/data";
-import { Headphones, Swords, Search, BookMarked, Gamepad2 } from "lucide-react";
+import { Headphones, Swords, Search, BookMarked, Gamepad2, Dumbbell } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
-  "Listening to music": <Headphones size={15} className="text-muted-foreground" />,
+  "Music": <Headphones size={15} className="text-muted-foreground" />,
   "Chess": <Swords size={15} className="text-muted-foreground" />,
-  "Technical & AI research": <Search size={15} className="text-muted-foreground" />,
+  "Research": <Search size={15} className="text-muted-foreground" />,
   "Journaling": <BookMarked size={15} className="text-muted-foreground" />,
   "Gaming": <Gamepad2 size={15} className="text-muted-foreground" />,
+  "Fitness": <Dumbbell size={15} className="text-muted-foreground" />,
 };
 
 export function HobbiesSection() {
@@ -15,7 +16,7 @@ export function HobbiesSection() {
       <p className="section-label">04 // Beyond Code</p>
 
       <p className="text-foreground/80 text-[15px] sm:text-base leading-relaxed mb-6">
-        When I step away from terminals and architecture diagrams, I keep my curiosity engaged through a mix of strategic thinking, music, and reflective writing.
+        When I step away from terminals and architecture diagrams, I keep my curiosity engaged through a mix of strategic thinking, music, research, and physical discipline.
       </p>
 
       <div className="grid sm:grid-cols-2 gap-3.5">
