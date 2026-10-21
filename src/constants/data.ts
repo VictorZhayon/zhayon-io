@@ -43,8 +43,6 @@ export const personalData = {
   email: "victorzion1@gmail.com",
   bookingUrl: "https://cal.com/victor-zion/30min",
   location: "Nigeria",
-  headline: "I build what works. I write what lasts.",
-  secondaryHeadline: "Half engineer, half writer. Fully useful.",
   bioParagraphs: [
     "I'm a software engineer and technical writer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation.",
     "My focus lives at the intersection of AI engineering, distributed backend systems, and developer education. I specialize in designing and deploying LLM applications, RAG pipelines, and Docs-as-Code ecosystems that translate complex architectures into intuitive experiences.",

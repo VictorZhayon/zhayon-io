@@ -54,16 +54,16 @@ export function HeroSection() {
 
   return (
     <section id="about" className="pt-10 sm:pt-16 pb-12 border-b border-border">
-      {/* Profile Photo with explicit width/height for zero CLS and fetchpriority for LCP */}
-      <div className="mb-6">
-        <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border border-border shadow-sm">
+      {/* Bigger, Circular Profile Photo */}
+      <div className="mb-6 sm:mb-8">
+        <div className="relative w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-border/80 shadow-md">
           <img
             src={profileImg}
             alt={personalData.name}
-            width={128}
-            height={128}
+            width={192}
+            height={192}
             fetchPriority="high"
-            className="w-full h-full object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-300"
+            className="w-full h-full object-cover grayscale-[15%] hover:grayscale-0 transition-all duration-300"
             loading="eager"
           />
         </div>
@@ -83,13 +83,6 @@ export function HeroSection() {
       <p className="font-mono text-xs sm:text-sm text-muted-foreground uppercase tracking-widest mb-6">
         {personalData.subTitle}
       </p>
-
-      {/* One-Liner Hook */}
-      <div className="mb-6 pl-4 border-l-2 border-border/80">
-        <p className="font-serif italic text-base sm:text-xl text-foreground/90 font-light leading-snug">
-          "{personalData.headline}"
-        </p>
-      </div>
 
       {/* Narrative Story (Utee style) */}
       <div className="space-y-4 text-foreground/80 text-[15px] sm:text-base leading-relaxed font-sans mb-8">
