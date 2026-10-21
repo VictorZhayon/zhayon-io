@@ -15,28 +15,41 @@ export function ContactSection() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(personalData.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      navigator.clipboard.writeText(personalData.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Fallback
+    }
+  };
+
+  const handleOpenLink = (url: string) => {
+    try {
+      window.open(url, "_blank", "noopener,noreferrer");
+    } catch {
+      window.location.href = url;
+    }
   };
 
   return (
     <section id="contact" className="py-12 border-b border-border">
-      <p className="section-label">06 // On The Internet</p>
+      <h2 className="section-label">06 // On The Internet</h2>
 
       {/* Narrative Invitation */}
       <div className="mb-8">
         <p className="text-foreground/80 text-[15px] sm:text-base leading-relaxed mb-4">
           I'm always open to discussing new technical leadership opportunities, distributed architectures, AI integrations, or documentation projects.
         </p>
+
         <div className="flex flex-wrap items-center gap-3">
-          <div className="inline-flex items-center gap-3 p-3 px-4 rounded-xl border border-border bg-card/30">
-            <span className="font-mono text-xs sm:text-sm text-foreground">
+          <div className="inline-flex items-center gap-3 p-3 px-4 min-h-[42px] rounded-xl border border-border bg-card/30">
+            <span className="font-mono text-xs sm:text-sm text-foreground select-all break-all">
               {personalData.email}
             </span>
             <button
               onClick={handleCopy}
-              className="p-1.5 rounded-md hover:bg-card text-muted-foreground hover:text-foreground transition-colors"
+              className="p-1.5 rounded-md hover:bg-card text-muted-foreground hover:text-foreground active:scale-95 transition-all cursor-pointer"
               title="Copy email to clipboard"
               aria-label="Copy email address"
             >
@@ -48,7 +61,11 @@ export function ContactSection() {
             href={personalData.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 p-3 px-4 rounded-xl border border-border bg-card/30 hover:bg-card/60 text-foreground text-xs sm:text-sm font-medium transition-colors group"
+            onClick={(e) => {
+              e.preventDefault();
+              handleOpenLink(personalData.bookingUrl);
+            }}
+            className="inline-flex items-center gap-2 p-3 px-4 min-h-[42px] rounded-xl border border-border bg-card/30 hover:bg-card/60 active:scale-[0.98] text-foreground text-xs sm:text-sm font-medium transition-all group cursor-pointer select-none"
           >
             <Calendar size={15} className="text-muted-foreground group-hover:text-foreground" />
             <span>Book a 30-min call</span>
@@ -65,7 +82,11 @@ export function ContactSection() {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group py-3.5 flex items-center justify-between text-sm transition-colors hover:text-foreground"
+            onClick={(e) => {
+              e.preventDefault();
+              handleOpenLink(link.href);
+            }}
+            className="group py-3.5 min-h-[44px] flex items-center justify-between text-sm transition-colors hover:text-foreground cursor-pointer"
           >
             <div className="flex items-center gap-3">
               <span className="text-muted-foreground group-hover:text-foreground transition-colors">

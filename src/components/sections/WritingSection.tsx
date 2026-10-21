@@ -4,7 +4,7 @@ import { ArrowUpRight, BookOpen } from "lucide-react";
 export function WritingSection() {
   return (
     <section id="writing" className="py-12 border-b border-border">
-      <p className="section-label">03 // Writing & Documentation</p>
+      <h2 className="section-label">03 // Writing & Documentation</h2>
 
       <p className="text-foreground/80 text-[15px] sm:text-base leading-relaxed mb-8">
         I believe clear writing is an engineering multiplier. When we document systems with precision, we eliminate ambiguity and make complex architectures approachable.
@@ -44,7 +44,7 @@ export function WritingSection() {
           href="https://medium.com/@victorzion1"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-xs font-medium text-muted-foreground hover:text-foreground transition-colors group"
+          className="inline-flex items-center gap-2 px-3.5 py-2.5 min-h-[40px] rounded-lg border border-border/60 bg-card/30 hover:bg-card text-xs font-medium text-muted-foreground hover:text-foreground transition-all group select-none active:scale-[0.98]"
         >
           <BookOpen size={14} />
           <span>Read more articles on Medium</span>

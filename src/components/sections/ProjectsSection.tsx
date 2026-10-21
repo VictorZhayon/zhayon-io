@@ -73,13 +73,13 @@ export function ProjectsSection() {
 
   return (
     <section id="projects" className="py-12 border-b border-border">
-      <p className="section-label">02 // Selected Projects</p>
+      <h2 className="section-label">02 // Selected Projects</h2>
 
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {featuredProjects.map((project) => (
           <article
             key={project.title}
-            className="group p-5 rounded-xl border border-border/50 bg-card/20 hover:bg-card/50 hover:border-border transition-all duration-200"
+            className="group p-4 sm:p-5 rounded-xl border border-border/50 bg-card/20 hover:bg-card/50 hover:border-border transition-all duration-200"
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 mb-2">
               <h3 className="text-base sm:text-lg font-medium text-foreground">
@@ -140,10 +140,10 @@ export function ProjectsSection() {
 
       {/* GitHub Open Source & Activity Metrics Block */}
       <div className="mt-10 pt-6 border-t border-border/60">
-        <div className="p-5 sm:p-6 rounded-xl border border-border/40 bg-card/25 space-y-6">
+        <div className="p-4 sm:p-6 rounded-xl border border-border/40 bg-card/25 space-y-6">
           {/* Header */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 border-b border-border/40">
-            <div className="flex items-center gap-3.5">
+            <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-card/60 border border-border/50 flex items-center justify-center text-foreground shrink-0">
                 <Github size={18} />
               </div>
@@ -170,7 +170,7 @@ export function ProjectsSection() {
           </div>
 
           {/* 6-metric grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-5 gap-x-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-y-5 gap-x-4 sm:gap-x-6">
             <div>
               <div className="font-serif text-2xl sm:text-3xl font-normal text-foreground">
                 {stats.contributions}

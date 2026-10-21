@@ -13,13 +13,13 @@ const iconMap: Record<string, React.ReactNode> = {
 export function HobbiesSection() {
   return (
     <section id="hobbies" className="py-12 border-b border-border">
-      <p className="section-label">04 // Beyond Code</p>
+      <h2 className="section-label">04 // Beyond Code</h2>
 
       <p className="text-foreground/80 text-[15px] sm:text-base leading-relaxed mb-6">
         When I step away from terminals and architecture diagrams, I keep my curiosity engaged through a mix of strategic thinking, music, research, and physical discipline.
       </p>
 
-      <div className="grid sm:grid-cols-2 gap-3.5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5">
         {hobbies.map((hobby) => (
           <div
             key={hobby.title}

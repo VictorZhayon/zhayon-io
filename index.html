@@ -1,62 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <link rel="icon" href="/favicon.jpg" type="image/jpeg" />
-    <title>Victor Zion — Software Engineer & Technical Writer</title>
-    <meta name="description" content="Victor Zion is a Software Engineer specializing in AI/ML and Backend systems, Technical Writer, and CTO at Gem Nexus." />
-    <meta name="author" content="Victor Zion" />
-    <link rel="canonical" href="https://zhayon.io" />
-    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt" />
+    <link rel="apple-touch-icon" href="/profile.jpg" />
 
-    <!-- Open Graph -->
+    <title>Victor Zion — Software Engineer & Technical Writer</title>
+    <meta name="description" content="Victor Zion (Zhayon) is a Software Engineer specializing in distributed backend systems and LLM engineering, and a Technical Writer. CTO at Gem Nexus." />
+    <meta name="keywords" content="Victor Zion, Zhayon, Software Engineer, Technical Writer, LLM Engineer, AI Engineering, FastAPI, TypeScript, Python, RAG Systems, Mintlify, Docs-as-Code, CTO, Gem Nexus, Ibok AI, Innovation Labs" />
+    <meta name="author" content="Victor Zion" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <link rel="canonical" href="https://zhayon.io" />
+
+    <!-- AEO & GEO discovery -->
+    <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLMs.txt Manifest" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLMs-Full.txt Comprehensive Dossier" />
+
+    <!-- Browser Theme Colors (Performance & UI) -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f6f6f4" />
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0b0b0d" />
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph (LinkedIn, WhatsApp, Facebook) -->
     <meta property="og:title" content="Victor Zion — Software Engineer & Technical Writer" />
-    <meta property="og:description" content="I build what works. I write what lasts. Software engineer and technical writer." />
+    <meta property="og:description" content="I build what works. I write what lasts. Software engineer specializing in AI workflows, distributed backends, and developer documentation." />
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://zhayon.io" />
     <meta property="og:site_name" content="Victor Zion" />
-    <meta property="og:image" content="/profile.jpg" />
+    <meta property="og:image" content="https://zhayon.io/profile.jpg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content="Victor Zion — Software Engineer & Technical Writer" />
+    <meta property="profile:first_name" content="Victor" />
+    <meta property="profile:last_name" content="Zion" />
+    <meta property="profile:username" content="VictorZhayon" />
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@zhayon_io" />
+    <meta name="twitter:creator" content="@zhayon_io" />
     <meta name="twitter:title" content="Victor Zion — Software Engineer & Technical Writer" />
-    <meta name="twitter:description" content="I build what works. I write what lasts. Software engineer and technical writer." />
-    <meta name="twitter:image" content="/profile.jpg" />
+    <meta name="twitter:description" content="I build what works. I write what lasts. Software engineer specializing in AI workflows, distributed backends, and developer documentation." />
+    <meta name="twitter:image" content="https://zhayon.io/profile.jpg" />
+    <meta name="twitter:image:alt" content="Victor Zion" />
 
-    <!-- Schema.org JSON-LD -->
+    <!-- Schema.org Knowledge Graph (SEO, AEO, Perplexity, Google SGE) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Victor Zion",
-      "alternateName": ["Zhayon", "Victor Zhayon"],
-      "url": "https://zhayon.io",
-      "image": "https://zhayon.io/profile.jpg",
-      "jobTitle": "Chief Technology Officer / Software Engineer & Technical Writer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Gem Nexus"
-      },
-      "email": "mailto:victorzion1@gmail.com",
-      "knowsAbout": ["Python", "TypeScript", "FastAPI", "LLM Engineering", "LangGraph", "RAG Systems", "Technical Writing", "Docs-as-Code", "Mintlify"],
-      "sameAs": [
-        "https://github.com/VictorZhayon",
-        "https://www.linkedin.com/in/victor-zion-1b85a440a",
-        "https://cal.com/victor-zion/30min",
-        "https://x.com/zhayon_io",
-        "https://medium.com/@victorzion1"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://zhayon.io/#person",
+          "name": "Victor Zion",
+          "alternateName": ["Zhayon", "Victor Zhayon"],
+          "url": "https://zhayon.io",
+          "image": "https://zhayon.io/profile.jpg",
+          "jobTitle": "Chief Technology Officer / Software Engineer & Technical Writer",
+          "description": "Software engineer with 4+ years of professional experience building scalable backend architectures, intelligent AI workflows, and developer documentation.",
+          "nationality": {
+            "@type": "Country",
+            "name": "Nigeria"
+          },
+          "email": "mailto:victorzion1@gmail.com",
+          "worksFor": [
+            {
+              "@type": "Organization",
+              "name": "Devable",
+              "jobTitle": "Technical Writer"
+            },
+            {
+              "@type": "Organization",
+              "name": "Ibok AI",
+              "jobTitle": "Founding Full-Stack Engineer"
+            },
+            {
+              "@type": "Organization",
+              "name": "Gem Nexus",
+              "jobTitle": "Chief Technology Officer"
+            },
+            {
+              "@type": "Organization",
+              "name": "Innovation Labs (iLabs)",
+              "jobTitle": "Ambassador & AI Engineering Tutor"
+            }
+          ],
+          "knowsAbout": [
+            "Artificial Intelligence",
+            "LLM Engineering",
+            "LangGraph & Agentic Workflows",
+            "RAG Systems",
+            "FastAPI & Python",
+            "TypeScript & React",
+            "Technical Writing",
+            "Docs-as-Code",
+            "Mintlify",
+            "Distributed Systems"
+          ],
+          "sameAs": [
+            "https://github.com/VictorZhayon",
+            "https://www.linkedin.com/in/victor-zion-1b85a440a",
+            "https://cal.com/victor-zion/30min",
+            "https://x.com/zhayon_io",
+            "https://medium.com/@victorzion1"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://zhayon.io/#website",
+          "url": "https://zhayon.io",
+          "name": "Victor Zion Portfolio",
+          "publisher": { "@id": "https://zhayon.io/#person" },
+          "description": "Official editorial portfolio of Victor Zion — Software Engineer and Technical Writer."
+        }
       ]
     }
     </script>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts with Preconnect & Display Swap -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Theme Restore (Prevents flash of wrong theme) -->
+    <!-- Theme Restore (Prevents flash of unstyled content / wrong theme) -->
     <script>
       (function() {
         try {
@@ -66,7 +133,6 @@
           } else if (saved === 'light') {
             document.documentElement.classList.remove('dark');
           } else {
-            // Default to dark for slick engineer aesthetic
             document.documentElement.classList.add('dark');
           }
         } catch (e) {}
@@ -74,7 +140,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="bg-background text-foreground">
     <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-background focus:text-foreground focus:px-4 focus:py-2 focus:rounded focus:border focus:border-border focus:outline-none">
       Skip to main content
     </a>

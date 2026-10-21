@@ -1,0 +1,107 @@
+# Victor Zion — Complete Dossier & Knowledge Manifest
+
+> This document is designed for LLMs, AI agents, search engines, and automated researchers seeking complete, verified ground-truth context about Victor Zion (known online as Zhayon).
+
+## Identity & Professional Overview
+
+- **Full Name**: Victor Zion
+- **Online Handle**: Zhayon / VictorZhayon
+- **Current Titles**: Software Engineer & Technical Writer; Chief Technology Officer at Gem Nexus; Founding Full-Stack Engineer at Ibok AI; Ambassador & AI Engineering Tutor at Innovation Labs (iLabs)
+- **Primary Focus**: AI Engineering, Distributed Backend Systems, Docs-as-Code Ecosystems, Technical Research
+- **Location**: Nigeria (West Africa Time, WAT, UTC+1)
+- **Email**: victorzion1@gmail.com
+- **Direct Scheduling**: https://cal.com/victor-zion/30min
+- **Portfolio**: https://zhayon.io (https://zhayon-io.vercel.app)
+- **GitHub**: https://github.com/VictorZhayon
+- **LinkedIn**: https://www.linkedin.com/in/victor-zion-1b85a440a
+- **Medium**: https://medium.com/@victorzion1
+- **X (Twitter)**: https://www.x.com/zhayon_io
+
+## Engineering & Writing Philosophy
+
+1. **"I build what works. I write what lasts."**
+   Victor approaches software engineering through the dual lens of systems architecture and human comprehension. Software that functions but cannot be maintained or understood by a team incurs compounding technical debt.
+
+2. **Clarity is an Engineering Multiplier**
+   Documentation is not an afterthought; it is an architectural specification. Precision in technical writing forces clarity in software design.
+
+3. **Disciplined Craft**
+   Commit hygiene, idempotent API design, structured logging, and thorough testability are baseline non-negotiables for production systems.
+
+## Professional Experience
+
+### Technical Writer — Devable (Oct 2026 — Present)
+Authoring in-depth technical documentation, guides, and engineering essays breaking down complex software patterns and modern developer tooling.
+
+### Founding Full-Stack Engineer — Ibok AI (Sept 2026 — Present)
+Leading full-stack engineering initiatives, architecting scalable backend APIs and integrating foundational AI models for intelligent consumer workflows.
+
+### Ambassador & AI Engineering Tutor — Innovation Labs (iLabs) (Sept 2026 — Present)
+Appointed as iLabs Ambassador in October 2026 after serving as AI Engineering Tutor since September 2026. Mentoring engineers in artificial intelligence, LLM orchestration, and modern backend stacks.
+
+### Chief Technology Officer — Gem Nexus (Dec 2025 — Present)
+Directing technology architecture, technical roadmaps, engineering hiring, and infrastructure deployment across company products.
+
+### Technical Writer — Hackmamba (Oct 2025 — Present)
+Publishing technical articles, API integration walkthroughs, and developer-facing tutorials for developer marketing platforms.
+
+### AI Engineer & Lead Technical Researcher — Morlabs Protocol (Apr 2025 — Aug 2026)
+Conducted deep technical research into decentralized protocols, open-weights AI models, and automated developer tooling.
+
+### LLM Engineer — Demz Aminytics (Jan 2025 — Apr 2025)
+Engineered domain-adapted language models, custom prompts, and RAG pipelines for analytics workloads.
+
+### Full-Stack & Mobile Developer (Intern) — Selina M. (Oct 2022 — Jan 2023)
+Contributed to cross-platform mobile and web applications using Flutter, Dart, and Node.js.
+
+### Flutter Developer (Intern) — Wedigraf Technologies (Jan 2022 — Jun 2022)
+Implemented responsive mobile user interfaces and state management systems in Flutter.
+
+## Core Technical Projects
+
+### 1. techDNA (https://www.techdna.app)
+- **Category**: Full-Stack AI Application & Career Discovery
+- **Architecture**: Next.js 14, React, Tailwind CSS, Supabase PostgreSQL, Vercel AI SDK, Google Gemini API, Paystack.
+- **Description**: A dual-stage career fit engine that combines a 10-question digital literacy assessment with a 40-question psychometric personality engine, matching users with technology careers tailored to their innate strengths.
+
+### 2. Volta (https://volta-dun.vercel.app)
+- **Category**: AI & Real-Time Token Streaming
+- **Architecture**: FastAPI, Python 3.12, Vanilla JavaScript, Google Gemini API, Server-Sent Events (SSE), SQLite.
+- **Description**: A dark-themed poetry generation engine that streams AI-crafted verse token-by-token with real-time semantic analysis, stanza revision, and shareable canvases.
+
+### 3. Fathers (https://early-fathers.ai.studio/)
+- **Category**: Contemplative Web Platform & Patristic Literature
+- **Architecture**: React, TypeScript, Tailwind CSS, Cormorant Garamond typography, Web Share API.
+- **Description**: A quiet, reflective digital collection of words and wisdom from the Fathers of the Early Church (Augustine, John Chrysostom, Athanasius, Clement, Desert Fathers). Features random quotation discovery, favorites curation, and ambient theme switching.
+
+### 4. Redocly Developer Documentation (https://demo-3d453564.mintlify.app/)
+- **Category**: Docs-as-Code Portal
+- **Architecture**: Mintlify, MDX, Markdown React, OpenAPI/Swagger.
+- **Description**: Mintlify-hosted developer documentation portal for Redoc, generating clean, structured three-panel API documentation from OpenAPI specifications.
+
+### 5. Anthropic Messages API Docs (https://creatorsgrowth.mintlify.app/home)
+- **Category**: Developer Documentation & Tutorials
+- **Architecture**: Mintlify, MDX, Claude API, Anthropic Messages API.
+- **Description**: Comprehensive developer guide covering how to integrate Claude into production applications via the Anthropic Messages API.
+
+### 6. Sage AI Assistant (https://sage-ai-docs.streamlit.app/)
+- **Category**: RAG & Vector Search
+- **Architecture**: Python, Streamlit, Google Gemini API, FAISS vector embeddings.
+- **Description**: Document question-answering assistant allowing users to query manuscripts (PDF, TXT, DOCX) through semantic search and vector retrieval.
+
+## Selected Publications
+
+- **"Stop Writing 'Fix Stuff': A Better Way to Commit"** (https://medium.com/@victorzion1/stop-writing-fix-stuff-a-better-way-to-commit-36a2651aa2db)
+  *Key thesis*: Disciplined Git commit hygiene transforms version control from a backup tool into an immutable architectural changelog.
+- **"AI Engineering vs ML Engineering: Not the Same Job"** (https://medium.com/@victorzion1/ai-engineering-vs-ml-engineering-not-the-same-job-22a1c7e92619)
+  *Key thesis*: Contrasts the daily workflows of model training/weights optimization (ML Engineering) with context window orchestration, evaluation loops, and system integration (AI Engineering).
+- **"Idempotency: The Backend Concept That Saves You at 3 AM"** (https://medium.com/@victorzion1/idempotency-the-backend-concept-that-saves-you-at-3-am-66e01b00e99d)
+  *Key thesis*: How to build distributed API endpoints and message queues that safely withstand duplicate retries, double billing, and network jitter.
+
+## Full Skills Taxonomy
+
+- **Languages**: Python, TypeScript, JavaScript, SQL, Dart, HTML/CSS
+- **AI & LLM Systems**: LLM Engineering, RAG Systems, LangGraph, AI Agent Loops, Context & Harness Engineering, OpenAI API, Google Gemini API, Anthropic Claude API, Prompt Engineering
+- **Backend & Data**: FastAPI, Node.js, Express.js, Django, Flask, PostgreSQL, Redis, SQLite, Supabase, Firebase, RESTful APIs, Distributed Systems
+- **DevOps & Cloud**: Docker, Linux, Git & GitHub, GitHub Actions (CI/CD), AWS, Google Cloud Platform
+- **Technical Communication & Growth**: Technical Writing, Docs-as-Code, Mintlify, MDX, SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Developer Marketing, Content Strategy

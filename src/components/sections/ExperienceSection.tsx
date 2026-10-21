@@ -3,7 +3,7 @@ import { experiences } from "@/constants/data";
 export function ExperienceSection() {
   return (
     <section id="experience" className="py-12 border-b border-border">
-      <p className="section-label">01 // Experience</p>
+      <h2 className="section-label">01 // Experience</h2>
 
       <div className="divide-y divide-border/60">
         {experiences.map((exp) => {
@@ -22,9 +22,9 @@ export function ExperienceSection() {
                       key={role.title}
                       className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group"
                     >
-                      <div className="text-base font-medium text-foreground">
+                      <h3 className="text-base font-medium text-foreground">
                         {role.title}
-                      </div>
+                      </h3>
                       <div className="font-mono text-xs text-muted-foreground whitespace-nowrap pt-0.5 sm:pt-0">
                         {role.period}
                       </div>
@@ -41,9 +41,9 @@ export function ExperienceSection() {
               className="py-4 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group"
             >
               <div>
-                <div className="text-base font-medium text-foreground">
+                <h3 className="text-base font-medium text-foreground">
                   {exp.title}
-                </div>
+                </h3>
                 <div className="text-sm text-muted-foreground mt-0.5">
                   {exp.company}
                 </div>
