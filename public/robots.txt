@@ -13,6 +13,9 @@ Allow: /
 User-agent: *
 Allow: /
 
+# XML Sitemap
+Sitemap: https://zhayon.io/sitemap.xml
+
 # LLMs.txt for AI agents and Generative Engine Optimization (GEO)
 # Specification: https://llmstxt.org/
 Sitemap: https://zhayon.io/llms.txt
