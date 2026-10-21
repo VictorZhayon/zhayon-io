@@ -6,24 +6,54 @@ export function ExperienceSection() {
       <p className="section-label">01 // Experience</p>
 
       <div className="divide-y divide-border/60">
-        {experiences.map((exp) => (
-          <div
-            key={exp.company + exp.period}
-            className="py-4 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group"
-          >
-            <div>
-              <div className="text-base font-medium text-foreground">
-                {exp.title}
+        {experiences.map((exp) => {
+          if (exp.roles && exp.roles.length > 0) {
+            return (
+              <div
+                key={exp.company}
+                className="py-4 first:pt-0 last:pb-0"
+              >
+                <div className="text-sm font-medium text-muted-foreground mb-3">
+                  {exp.company}
+                </div>
+                <div className="space-y-3 pl-3.5 border-l-2 border-border/80">
+                  {exp.roles.map((role) => (
+                    <div
+                      key={role.title}
+                      className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group"
+                    >
+                      <div className="text-base font-medium text-foreground">
+                        {role.title}
+                      </div>
+                      <div className="font-mono text-xs text-muted-foreground whitespace-nowrap pt-0.5 sm:pt-0">
+                        {role.period}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="text-sm text-muted-foreground mt-0.5">
-                {exp.company}
+            );
+          }
+
+          return (
+            <div
+              key={exp.company + (exp.title || "")}
+              className="py-4 first:pt-0 last:pb-0 flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 group"
+            >
+              <div>
+                <div className="text-base font-medium text-foreground">
+                  {exp.title}
+                </div>
+                <div className="text-sm text-muted-foreground mt-0.5">
+                  {exp.company}
+                </div>
+              </div>
+              <div className="font-mono text-xs text-muted-foreground whitespace-nowrap pt-1 sm:pt-0">
+                {exp.period}
               </div>
             </div>
-            <div className="font-mono text-xs text-muted-foreground whitespace-nowrap pt-1 sm:pt-0">
-              {exp.period}
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

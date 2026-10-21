@@ -7,10 +7,16 @@ export interface Project {
   category?: string;
 }
 
-export interface Experience {
-  company: string;
+export interface ExperienceRole {
   title: string;
   period: string;
+}
+
+export interface Experience {
+  company: string;
+  title?: string;
+  period?: string;
+  roles?: ExperienceRole[];
   tech?: string[];
 }
 
@@ -67,9 +73,17 @@ export const experiences: Experience[] = [
     period: "Sept 2026 — Present"
   },
   {
-    title: "AI Engineering Tutor & Ambassador",
     company: "Innovation Labs (iLabs)",
-    period: "Sept 2026 — Present"
+    roles: [
+      {
+        title: "Ambassador",
+        period: "Oct 2026 — Present"
+      },
+      {
+        title: "AI Engineering Tutor",
+        period: "Sept 2026 — Present"
+      }
+    ]
   },
   {
     title: "Chief Technology Officer",
