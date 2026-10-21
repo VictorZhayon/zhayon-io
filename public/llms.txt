@@ -5,7 +5,7 @@
 - Location: Nigeria
 - Email: victorzion1@gmail.com
 - Booking: https://cal.com/victor-zion/30min
-- Portfolio: https://zhayon-io.vercel.app
+- Portfolio: https://zhayon.io (https://zhayon-io.vercel.app)
 - GitHub: https://github.com/VictorZhayon
 - LinkedIn: https://www.linkedin.com/in/victor-zion-1b85a440a
 - Medium: https://medium.com/@victorzion1
@@ -13,7 +13,7 @@
 
 ## Summary
 
-Victor Zion (also known as Zhayon) is a Software Engineer and Technical Writer. He builds production-grade backend architectures and AI-driven applications while communicating complex technical systems through clear developer documentation and technical essays. His philosophy: "I build what works. I write what lasts."
+Victor Zion (also known as Zhayon) is a Software Engineer and Technical Writer. He builds production-grade backend architectures and AI-driven applications while communicating complex technical systems through clear developer documentation and technical essays.
 
 ## Current Roles & Experience
 

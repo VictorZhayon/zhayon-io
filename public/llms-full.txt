@@ -19,7 +19,7 @@
 
 ## Engineering & Writing Philosophy
 
-1. **"I build what works. I write what lasts."**
+1. **Systems Built for Reliability & Longevity**
    Victor approaches software engineering through the dual lens of systems architecture and human comprehension. Software that functions but cannot be maintained or understood by a team incurs compounding technical debt.
 
 2. **Clarity is an Engineering Multiplier**

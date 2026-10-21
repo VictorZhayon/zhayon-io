@@ -53,14 +53,23 @@ export function Navbar() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
+  const handleBrandClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/40 transition-colors duration-200">
         <div className="max-w-content mx-auto px-6 h-16 flex items-center justify-between relative">
-          {/* Brand */}
+          {/* Brand - Smooth scrolls to top */}
           <a
-            href="#"
-            className="flex items-center gap-2.5 group text-foreground font-serif text-lg tracking-tight hover:opacity-80 transition-opacity shrink-0"
+            href="#about"
+            onClick={handleBrandClick}
+            className="flex items-center gap-2.5 group text-foreground font-serif text-lg tracking-tight hover:opacity-80 transition-opacity shrink-0 cursor-pointer"
           >
             <img
               src={profileImg}
